@@ -18,6 +18,11 @@ from dataclasses import dataclass
 import matplotlib
 matplotlib.use('Agg')  # Non-interactive backend
 import matplotlib.pyplot as plt
+
+# Tahoma has Thai glyphs; DejaVu is the last-resort fallback
+plt.rcParams['font.family'] = 'sans-serif'
+plt.rcParams['font.sans-serif'] = ['Tahoma', 'Leelawadee UI', 'Arial', 'DejaVu Sans']
+plt.rcParams['axes.unicode_minus'] = False
 import numpy as np
 from matplotlib.patches import Polygon
 from matplotlib.collections import PatchCollection
@@ -44,6 +49,70 @@ try:
 except ImportError:
     HAS_FPDF = False
     print("Warning: fpdf2 not available. Install with: pip install fpdf2")
+
+
+# ============================================================
+# Thai localisation
+# Labels come from src/i18n/th.json (shared with the Thai UI).
+# Scoring keys stay in English; only displayed text is Thai.
+# ============================================================
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+THAI_FONT = 'Tahoma'  # ships with Windows and includes Thai glyphs
+
+
+def _load_i18n(name: str) -> Dict[str, Any]:
+    try:
+        with open(os.path.join(HERE, 'src', 'i18n', name), encoding='utf-8') as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+_TH = _load_i18n('th.json')
+_EN = _load_i18n('en.json')
+
+THAI_MONTHS = ['มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน',
+               'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม']
+
+# Maturity keys are English internally; display text is Thai
+MATURITY_TH = {'Leading': 'ผู้นำ', 'Advanced': 'ขั้นสูง', 'Developing': 'กำลังพัฒนา', 'Initial': 'เริ่มต้น'}
+
+
+def thai_date(dt: datetime) -> str:
+    """Thai date with Buddhist era, e.g. '22 พฤศจิกายน 2569'."""
+    return f"{dt.day} {THAI_MONTHS[dt.month - 1]} {dt.year + 543}"
+
+
+def section_title_th(section_id: str, fallback: str = '') -> str:
+    return _TH.get('sections', {}).get(section_id) or fallback or section_id
+
+
+def question_text_th(section_id: str, key: str, fallback: str = '') -> str:
+    """Thai question text; falls back to the stored English text."""
+    node = _TH.get('questions', {}).get(section_id, {}).get(key, {})
+    return node.get('text') or fallback
+
+
+def answer_th(section_id: str, key: str, answer: Any) -> Any:
+    """Translate a stored English option value (or list of values) into Thai."""
+    en_opts = _EN.get('questions', {}).get(section_id, {}).get(key, {}).get('options') or []
+    th_opts = _TH.get('questions', {}).get(section_id, {}).get(key, {}).get('options') or []
+    mapping = dict(zip(en_opts, th_opts))
+    if isinstance(answer, list):
+        return [mapping.get(a, a) if isinstance(a, str) else a for a in answer]
+    if isinstance(answer, str):
+        return mapping.get(answer, answer)
+    return answer
+
+
+def _set_thai_rfonts(style) -> None:
+    """Use Tahoma for every script slot and drop theme-font overrides so Thai renders correctly."""
+    rfonts = style.element.get_or_add_rPr().get_or_add_rFonts()
+    for attr in ('w:asciiTheme', 'w:hAnsiTheme', 'w:eastAsiaTheme', 'w:cstheme'):
+        rfonts.attrib.pop(qn(attr), None)
+    for attr in ('w:ascii', 'w:hAnsi', 'w:eastAsia', 'w:cs'):
+        rfonts.set(qn(attr), THAI_FONT)
 
 
 # ============================================================
@@ -378,7 +447,8 @@ class ScoringEngine:
         }
         
         for section_id, responses_data in sections_data.items():
-            title, icon = section_meta.get(section_id, (section_id, '📋'))
+            _, icon = section_meta.get(section_id, (section_id, '📋'))
+            title = section_title_th(section_id, section_id)
             
             responses = [
                 QuestionResponse(
@@ -432,12 +502,12 @@ class RadarChartGenerator:
         labels_closed = labels + [labels[0]]
         
         # Plot
-        ax.plot(angles_closed, values_closed, 'o-', linewidth=2, color='#2563eb', label='Current Score')
+        ax.plot(angles_closed, values_closed, 'o-', linewidth=2, color='#2563eb', label='คะแนนปัจจุบัน')
         ax.fill(angles_closed, values_closed, alpha=0.25, color='#2563eb')
         
         # Target line (80% benchmark)
         target = [80] * (len(labels) + 1)
-        ax.plot(angles_closed, target, '--', linewidth=1.5, color='#ef4444', label='Target (80%)')
+        ax.plot(angles_closed, target, '--', linewidth=1.5, color='#ef4444', label='เป้าหมาย (80%)')
         
         # Styling
         ax.set_xticks(angles)
@@ -448,7 +518,7 @@ class RadarChartGenerator:
         ax.grid(True, alpha=0.3)
         
         # Title
-        plt.title(f'{company_name}\nDigital Diagnostic Assessment - Overall Scores', 
+        plt.title(f'{company_name}\nผลการประเมินดิจิทัล - คะแนนภาพรวม', 
                   size=14, fontweight='bold', pad=30, color='#1e293b')
         plt.legend(loc='upper right', bbox_to_anchor=(1.3, 1.1), fontsize=10)
         
@@ -475,7 +545,8 @@ class RadarChartGenerator:
         
         for r in rating_responses:
             # Shorten label for readability
-            label = r.question_text[:40] + '...' if len(r.question_text) > 40 else r.question_text
+            qtext = question_text_th(section.section_id, r.question_key, r.question_text)
+            label = qtext[:40] + '...' if len(qtext) > 40 else qtext
             labels.append(label)
             
             score = ScoringEngine().score_answer(r.question_key, r.answer, r.answer_type)
@@ -512,7 +583,7 @@ class RadarChartGenerator:
         
         # Target
         target = [80] * (len(labels) + 1)
-        ax.plot(angles_closed, target, '--', linewidth=1, color='#94a3b8', label='Target (80%)')
+        ax.plot(angles_closed, target, '--', linewidth=1, color='#94a3b8', label='เป้าหมาย (80%)')
         
         # Styling
         ax.set_xticks(angles)
@@ -522,7 +593,7 @@ class RadarChartGenerator:
         ax.set_yticklabels(['20', '40', '60', '80', '100'], fontsize=7)
         ax.grid(True, alpha=0.3)
         
-        plt.title(f'{section.icon} {section.section_title}\nScore: {section.score}%', 
+        plt.title(f'{section.icon} {section.section_title}\nคะแนน: {section.score}%', 
                   size=12, fontweight='bold', pad=20, color='#1e293b')
         plt.legend(loc='upper right', bbox_to_anchor=(1.3, 1.1), fontsize=8)
         
@@ -542,31 +613,31 @@ class RadarChartGenerator:
         
         # Industry benchmarks (example values - could be configurable)
         benchmarks = {
-            'Company Profile': 90,
-            'SWOT Analysis': 65,
-            'Strategic Planning': 70,
-            'Production Management': 75,
-            'Sales & Marketing': 68,
-            'R&D and Innovation': 60,
-            'Productivity': 72,
-            'Waste Management': 55,
-            'BCG (Bio-Circular-Green Economy)': 50,
-            'OEE (Overall Equipment Effectiveness)': 65,
+            'company_profile': 90,
+            'swot': 65,
+            'strategic_planning': 70,
+            'production_management': 75,
+            'sales_marketing': 68,
+            'rd_innovation': 60,
+            'productivity': 72,
+            'waste_management': 55,
+            'bcg': 50,
+            'oee': 65,
         }
         
-        benchmark_values = [benchmarks.get(l, 70) for l in labels]
+        benchmark_values = [benchmarks.get(s.section_id, 70) for s in scores]
         
         angles = np.linspace(0, 2 * np.pi, len(labels), endpoint=False).tolist()
         
         # Current
         current_closed = current + [current[0]]
         angles_closed = angles + [angles[0]]
-        ax.plot(angles_closed, current_closed, 'o-', linewidth=2, color='#2563eb', label='Your Score')
+        ax.plot(angles_closed, current_closed, 'o-', linewidth=2, color='#2563eb', label='คะแนนของคุณ')
         ax.fill(angles_closed, current_closed, alpha=0.2, color='#2563eb')
         
         # Benchmark
         bench_closed = benchmark_values + [benchmark_values[0]]
-        ax.plot(angles_closed, bench_closed, 's--', linewidth=2, color='#ef4444', label='Industry Benchmark')
+        ax.plot(angles_closed, bench_closed, 's--', linewidth=2, color='#ef4444', label='ค่าเฉลี่ยอุตสาหกรรม')
         ax.fill(angles_closed, bench_closed, alpha=0.1, color='#ef4444')
         
         ax.set_xticks(angles)
@@ -576,7 +647,7 @@ class RadarChartGenerator:
         ax.set_yticklabels(['20', '40', '60', '80', '100'], fontsize=8)
         ax.grid(True, alpha=0.3)
         
-        plt.title(f'{company_name}\nBenchmark Comparison', 
+        plt.title(f'{company_name}\nเปรียบเทียบกับค่าเฉลี่ยอุตสาหกรรม', 
                   size=14, fontweight='bold', pad=30, color='#1e293b')
         plt.legend(loc='upper right', bbox_to_anchor=(1.3, 1.1), fontsize=10)
         
@@ -598,12 +669,12 @@ class AnalysisEngine:
     # Detailed recommendations per section
     RECOMMENDATIONS = {
         'company_profile': {
-            'strengths': ['Basic company information captured'],
-            'gaps': ['Revenue range in THB may need conversion for international benchmarking',
-                     'Ownership type impacts governance - ensure clarity'],
-            'quick_wins': ['Complete all optional fields for better context',
-                          'Add website for digital presence assessment'],
-            'strategic': ['Align company profile with industry peers for benchmarking']
+            'strengths': ['มีการบันทึกข้อมูลพื้นฐานของบริษัทแล้ว'],
+            'gaps': ['รายได้ที่แสดงเป็นบาทอาจต้องแปลงเพื่อเทียบกับมาตรฐานสากล',
+                     'โครงสร้างการเป็นเจ้าของมีผลต่อการกำกับดูแล จึงควรทำให้ชัดเจน'],
+            'quick_wins': ['กรอกข้อมูลที่ไม่บังคับให้ครบเพื่อให้บริบทชัดเจนขึ้น',
+                          'เพิ่มเว็บไซต์เพื่อใช้ประเมินการปรากฏตัวทางดิจิทัล'],
+            'strategic': ['จัดแนวโปรไฟล์บริษัทให้สอดคล้องกับคู่แข่งในอุตสาหกรรมเพื่อใช้เปรียบเทียบ']
         },
         'swot': {
             'strengths': [],
@@ -612,108 +683,108 @@ class AnalysisEngine:
             'strategic': []
         },
         'strategic_planning': {
-            'strengths': ['Clear vision/mission provides direction',
-                         'OKR adoption enables measurable execution'],
-            'gaps': ['Strategy review frequency may be too low (annual only)',
-                    'KPIs not cascaded to individual level',
-                    'Scenario planning often missing'],
-            'quick_wins': ['Increase strategy reviews to quarterly',
-                          'Define 3-5 measurable strategic priorities',
-                          'Implement basic OKR framework'],
-            'strategic': ['Develop 3-5 year strategic roadmap with milestones',
-                         'Build competitive intelligence capability',
-                         'Integrate scenario planning into annual cycle']
+            'strengths': ['วิสัยทัศน์และพันธกิจที่ชัดเจนให้ทิศทางแก่องค์กร',
+                         'การนำ OKR มาใช้ช่วยให้การดำเนินงานวัดผลได้'],
+            'gaps': ['ความถี่ในการทบทวนกลยุทธ์อาจน้อยเกินไป (ทบทวนเพียงปีละครั้ง)',
+                    'ตัวชี้วัดหลัก (KPI) ยังไม่ถูกถ่ายทอดไปถึงระดับบุคคล',
+                    'มักขาดการวางแผนสถานการณ์ (Scenario Planning)'],
+            'quick_wins': ['เพิ่มการทบทวนกลยุทธ์เป็นรายไตรมาส',
+                          'กำหนดลำดับความสำคัญเชิงกลยุทธ์ที่วัดผลได้ 3-5 ข้อ',
+                          'เริ่มใช้กรอบ OKR พื้นฐาน'],
+            'strategic': ['จัดทำแผนงานกลยุทธ์ 3-5 ปีพร้อมจุดตรวจสอบ',
+                         'สร้างความสามารถด้านการติดตามข้อมูลคู่แข่ง',
+                         'บูรณาการการวางแผนสถานการณ์เข้ากับวงจรแผนประจำปี']
         },
         'production_management': {
-            'strengths': ['OEE tracking provides visibility',
-                         'Lean adoption improves efficiency'],
-            'gaps': ['Maintenance strategy often reactive',
-                    'Digital manufacturing maturity low',
-                    'Sustainability not integrated into production'],
-            'quick_wins': ['Implement preventive maintenance schedule',
-                          'Start OEE data collection on bottleneck equipment',
-                          'Conduct 5S workplace organization'],
-            'strategic': ['Deploy TPM (Total Productive Maintenance)',
-                         'Invest in Industry 4.0 / IIoT capabilities',
-                         'Integrate circular economy principles']
+            'strengths': ['การติดตาม OEE ช่วยให้มองเห็นภาพการผลิตชัดเจน',
+                         'การนำแนวคิด Lean มาใช้ช่วยเพิ่มประสิทธิภาพ'],
+            'gaps': ['การบำรุงรักษามักเป็นแบบตอบสนอง (Reactive)',
+                    'ระดับการผลิตดิจิทัลยังต่ำ',
+                    'ความยั่งยืนยังไม่ถูกบูรณาการในการผลิต'],
+            'quick_wins': ['จัดทำแผนบำรุงรักษาเชิงป้องกัน',
+                          'เริ่มเก็บข้อมูล OEE ในเครื่องจักรคอขวด',
+                          'ดำเนินกิจกรรม 5ส เพื่อจัดระเบียบพื้นที่ทำงาน'],
+            'strategic': ['นำระบบ TPM (การบำรุงรักษาผลิตผลรวมทั้งหมด) มาใช้',
+                         'ลงทุนในความสามารถ Industry 4.0 / IIoT',
+                         'บูรณาการหลักการเศรษฐกิจหมุนเวียนเข้ากับการผลิต']
         },
         'sales_marketing': {
-            'strengths': ['CRM adoption enables pipeline visibility',
-                         'Digital presence supports lead generation'],
-            'gaps': ['Forecasting accuracy often below 70%',
-                    'Marketing ROI measurement immature',
-                    'Sales-marketing alignment weak'],
-            'quick_wins': ['Implement weekly pipeline reviews',
-                          'Define shared MQL/SQL definitions',
-                          'Set up marketing attribution tracking'],
-            'strategic': ['Build account-based marketing for key accounts',
-                         'Develop sales enablement program',
-                         'Invest in predictive analytics for forecasting']
+            'strengths': ['การใช้ CRM ช่วยให้มองเห็นท่อการขาย (Pipeline)',
+                         'การมีตัวตนทางดิจิทัลช่วยสร้างลูกค้าเป้าหมาย'],
+            'gaps': ['ความแม่นยำในการพยากรณ์การขายมักต่ำกว่า 70%',
+                    'การวัดผลตอบแทนการตลาด (ROI) ยังไม่ครบถ้วน',
+                    'การประสานงานระหว่างฝ่ายขายและการตลาดยังอ่อน'],
+            'quick_wins': ['จัดการทบทวนท่อการขายทุกสัปดาห์',
+                          'กำหนดนิยาม MQL/SQL ร่วมกัน',
+                          'ตั้งระบบติดตามที่มาของการตลาด (Marketing Attribution)'],
+            'strategic': ['พัฒนาการตลาดแบบเจาะบัญชีลูกค้าสำคัญ (Account-based Marketing)',
+                         'พัฒนาโปรแกรมสนับสนุนการขาย',
+                         'ลงทุนในการวิเคราะห์เชิงพยากรณ์เพื่อพยากรณ์การขาย']
         },
         'rd_innovation': {
-            'strengths': ['IP management protects innovations',
-                         'External collaboration expands capabilities'],
-            'gaps': ['R&D investment often below industry average',
-                    'Commercialization success rate low',
-                    'Innovation culture not systematically measured'],
-            'quick_wins': ['Stage-gate process for project selection',
-                          'Allocate 10-15% time for exploratory innovation',
-                          'Create innovation challenge program'],
-            'strategic': ['Build corporate venture / startup partnership program',
-                         'Establish innovation metrics (vitality index, NPV)',
-                         'Create dedicated innovation lab or CoE']
+            'strengths': ['การจัดการทรัพย์สินทางปัญญาช่วยคุ้มครองนวัตกรรม',
+                         'ความร่วมมือจากภายนอกช่วยขยายขีดความสามารถ'],
+            'gaps': ['งบประมาณ R&D มักต่ำกว่าค่าเฉลี่ยอุตสาหกรรม',
+                    'อัตราความสำเร็จในการนำนวัตกรรมสู่เชิงพาณิชย์ต่ำ',
+                    'วัฒนธรรมนวัตกรรมยังไม่ได้รับการวัดผลอย่างเป็นระบบ'],
+            'quick_wins': ['ใช้กระบวนการ Stage-gate ในการคัดเลือกโครงการ',
+                          'จัดสรรเวลา 10-15% ให้การทดลองนวัตกรรม',
+                          'สร้างโปรแกรมการแข่งขันด้านนวัตกรรม'],
+            'strategic': ['สร้างโปรแกรมร่วมลงทุนกับบริษัทสตาร์ทอัพ (Corporate Venture)',
+                         'กำหนดตัวชี้วัดนวัตกรรม (เช่น Vitality Index, NPV)',
+                         'จัดตั้งห้องปฏิบัติการนวัตกรรมหรือศูนย์ความเป็นเลิศ (CoE)']
         },
         'productivity': {
-            'strengths': ['Continuous improvement culture emerging',
-                         'Performance measurement in place'],
-            'gaps': ['Automation level below peers',
-                    'Cross-functional collaboration limited',
-                    'Change management capability weak'],
-            'quick_wins': ['Map and eliminate top 3 process wastes',
-                          'Standardize work instructions for critical processes',
-                          'Launch employee suggestion system'],
-            'strategic': ['Deploy automation/RPA for repetitive tasks',
-                         'Build digital skills academy',
-                         'Implement integrated performance management system']
+            'strengths': ['เริ่มมีวัฒนธรรมการปรับปรุงอย่างต่อเนื่อง',
+                         'มีระบบวัดผลการดำเนินงานแล้ว'],
+            'gaps': ['ระดับการทำงานอัตโนมัติต่ำกว่าคู่แข่ง',
+                    'ความร่วมมือข้ามฝ่ายยังมีจำกัด',
+                    'ความสามารถในการจัดการการเปลี่ยนแปลงยังอ่อน'],
+            'quick_wins': ['ระบุและขจัดความสูญเปล่าในกระบวนการ 3 อันดับแรก',
+                          'กำหนดมาตรฐานคำสั่งงานสำหรับกระบวนการสำคัญ',
+                          'เปิดระบบรับข้อเสนอแนะจากพนักงาน'],
+            'strategic': ['นำระบบอัตโนมัติ/RPA มาใช้กับงานที่ซ้ำซ้อน',
+                         'สร้างโครงการพัฒนาทักษะดิจิทัล',
+                         'ติดตั้งระบบบริหารผลการดำเนินงานแบบบูรณาการ']
         },
         'waste_management': {
-            'strengths': ['Regulatory compliance baseline met',
-                         'Energy efficiency initiatives started'],
-            'gaps': ['Circular economy initiatives minimal',
-                    'Scope 3 emissions not tracked',
-                    'Supplier engagement on sustainability low'],
-            'quick_wins': ['Conduct waste audit across operations',
-                          'Set waste reduction targets (e.g., 20% in 2 years)',
-                          'Implement energy monitoring'],
-            'strategic': ['Develop circular business model pilots',
-                         'Commit to science-based targets (SBTi)',
-                         'Integrate ESG into procurement decisions']
+            'strengths': ['ผ่านเกณฑ์พื้นฐานด้านการปฏิบัติตามกฎระเบียบ',
+                         'เริ่มดำเนินโครงการประหยัดพลังงานแล้ว'],
+            'gaps': ['โครงการเศรษฐกิจหมุนเวียนยังมีน้อย',
+                    'ยังไม่ได้ติดตามการปล่อยก๊าซ Scope 3',
+                    'การมีส่วนร่วมของซัพพลายเออร์ด้านความยั่งยืนยังต่ำ'],
+            'quick_wins': ['ตรวจสอบของเสียในทุกการดำเนินงาน',
+                          'กำหนดเป้าหมายลดของเสีย (เช่น ลด 20% ภายใน 2 ปี)',
+                          'ติดตั้งระบบตรวจวัดพลังงาน'],
+            'strategic': ['พัฒนานำร่องโมเดลธุรกิจเศรษฐกิจหมุนเวียน',
+                         'ตั้งเป้าหมายตามหลักวิทยาศาสตร์ (SBTi)',
+                         'บูรณาการ ESG เข้ากับการตัดสินใจด้านจัดซื้อ']
         },
         'bcg': {
-            'strengths': ['Awareness of BCG model growing',
-                         'Some green economy initiatives'],
-            'gaps': ['Bioeconomy adoption very low',
-                    'Circular economy not systematic',
-                    'Governance structure for BCG missing'],
-            'quick_wins': ['Map current bio-based material usage',
-                          'Identify circular opportunities in value chain',
-                          'Assign BCG champion in leadership'],
-            'strategic': ['Develop BCG transformation roadmap',
-                         'Invest in bio-based R&D partnerships',
-                         'Create green finance framework']
+            'strengths': ['ความตระหนักรู้เกี่ยวกับโมเดล BCG เพิ่มขึ้น',
+                         'มีโครงการเศรษฐกิจสีเขียวบางส่วน'],
+            'gaps': ['การนำเศรษฐกิจชีวภาพมาใช้อยู่ในระดับต่ำมาก',
+                    'เศรษฐกิจหมุนเวียนยังไม่เป็นระบบ',
+                    'ยังไม่มีโครงสร้างการกำกับดูแลสำหรับ BCG'],
+            'quick_wins': ['ระบุการใช้วัสดุจากชีวภาพในปัจจุบัน',
+                          'ระบุโอกาสเศรษฐกิจหมุนเวียนในห่วงโซ่คุณค่า',
+                          'แต่งตั้งผู้รับผิดชอบด้าน BCG ในระดับผู้บริหาร'],
+            'strategic': ['พัฒนาแผนงานการเปลี่ยนแปลงสู่ BCG',
+                         'ลงทุนในความร่วมมือวิจัยและพัฒนาด้านชีวภาพ',
+                         'สร้างกรอบการเงินสีเขียว']
         },
         'oee': {
-            'strengths': ['OEE measurement provides baseline',
-                         'TPM awareness exists'],
-            'gaps': ['OEE data collection often manual',
-                    'Loss analysis not systematic',
-                    'Operator involvement limited'],
-            'quick_wins': ['Automate OEE data collection on key lines',
-                          'Conduct focused improvement on top 3 losses',
-                          'Train operators on basic TPM'],
-            'strategic': ['Deploy autonomous maintenance program',
-                         'Integrate OEE with MES/ERP',
-                         'Build predictive maintenance capability']
+            'strengths': ['การวัด OEE ให้ข้อมูลตั้งต้น',
+                         'มีความตระหนักรู้เรื่อง TPM'],
+            'gaps': ['การเก็บข้อมูล OEE มักทำด้วยมือ',
+                    'การวิเคราะห์สาเหตุการสูญเสียยังไม่เป็นระบบ',
+                    'การมีส่วนร่วมของผู้ปฏิบัติงานมีจำกัด'],
+            'quick_wins': ['ทำให้การเก็บข้อมูล OEE เป็นอัตโนมัติในสายการผลิตหลัก',
+                          'ปรับปรุงอย่างมุ่งเป้าใน 3 การสูญเสียอันดับแรก',
+                          'ฝึกอบรมผู้ปฏิบัติงานเรื่อง TPM พื้นฐาน'],
+            'strategic': ['นำโปรแกรมการบำรุงรักษาด้วยตนเอง (Autonomous Maintenance) มาใช้',
+                         'เชื่อม OEE เข้ากับ MES/ERP',
+                         'สร้างความสามารถในการบำรุงรักษาเชิงพยากรณ์']
         },
     }
     
@@ -727,16 +798,16 @@ class AnalysisEngine:
         # Determine maturity level
         if section.score >= 80:
             maturity = 'Leading'
-            maturity_desc = 'Best-in-class capabilities, focus on innovation and optimization'
+            maturity_desc = 'ความสามารถระดับเหนือชั้น เน้นนวัตกรรมและการปรับปรุงให้ดียิ่งขึ้น'
         elif section.score >= 60:
             maturity = 'Advanced'
-            maturity_desc = 'Strong capabilities, focus on refinement and scaling'
+            maturity_desc = 'ความสามารถที่แข็งแรง เน้นการปรับปรุงและขยายผล'
         elif section.score >= 40:
             maturity = 'Developing'
-            maturity_desc = 'Basic capabilities in place, focus on strengthening fundamentals'
+            maturity_desc = 'มีความสามารถพื้นฐานแล้ว เน้นเสริมสร้างรากฐานให้แข็งแรง'
         else:
             maturity = 'Initial'
-            maturity_desc = 'Early stage, focus on building foundational capabilities'
+            maturity_desc = 'อยู่ในระยะเริ่มต้น เน้นสร้างความสามารถพื้นฐาน'
         
         # Priority areas (lowest scoring questions)
         rating_responses = [r for r in section.responses if r.answer_type == 'rating']
@@ -745,9 +816,9 @@ class AnalysisEngine:
             score = ScoringEngine().score_answer(r.question_key, r.answer, r.answer_type)
             if score is not None and score < 50:
                 priority_areas.append({
-                    'question': r.question_text,
+                    'question': question_text_th(section.section_id, r.question_key, r.question_text),
                     'score': score,
-                    'current_answer': r.answer
+                    'current_answer': answer_th(section.section_id, r.question_key, r.answer)
                 })
         
         priority_areas.sort(key=lambda x: x['score'])
@@ -762,10 +833,10 @@ class AnalysisEngine:
             'completion_rate': round(section.answered / section.total * 100, 1) if section.total > 0 else 0,
             'maturity_level': maturity,
             'maturity_description': maturity_desc,
-            'strengths': recs.get('strengths', ['Assessment completed']),
-            'gaps': recs.get('gaps', ['Review responses for specific gaps']),
-            'quick_wins': recs.get('quick_wins', ['Complete all unanswered questions']),
-            'strategic_initiatives': recs.get('strategic', ['Develop improvement roadmap']),
+            'strengths': recs.get('strengths', ['ดำเนินการประเมินเสร็จสิ้นแล้ว']),
+            'gaps': recs.get('gaps', ['ตรวจสอบคำตอบเพื่อหาช่องว่างที่เฉพาะเจาะจง']),
+            'quick_wins': recs.get('quick_wins', ['ตอบคำถามที่ยังไม่ได้ตอบให้ครบ']),
+            'strategic_initiatives': recs.get('strategic', ['พัฒนาแผนงานปรับปรุง']),
             'priority_areas': priority_areas[:5]  # Top 5
         }
     
@@ -789,10 +860,10 @@ class AnalysisEngine:
             maturity_counts[m] = maturity_counts.get(m, 0) + 1
         
         return {
-            'company_name': company.get('name', 'Unknown'),
-            'industry': company.get('industry', 'N/A'),
-            'size': company.get('size', company.get('company_size', 'N/A')),
-            'assessment_date': datetime.now().strftime('%B %d, %Y'),
+            'company_name': company.get('name', 'ไม่ทราบชื่อ'),
+            'industry': answer_th('company_profile', 'industry', company.get('industry', 'ไม่ระบุ')),
+            'size': answer_th('company_profile', 'company_size', company.get('size', company.get('company_size', 'ไม่ระบุ'))),
+            'assessment_date': thai_date(datetime.now()),
             'overall_score': round(overall_score, 1),
             'completion_rate': round(total_answered / total_questions * 100, 1) if total_questions > 0 else 0,
             'top_strengths': [{'title': s['section_title'], 'score': s['score'], 'icon': s['icon']} for s in top_strengths],
