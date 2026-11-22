@@ -1,0 +1,2607 @@
+{
+  "app": {
+    "title": "Digital Diagnostic Questionnaire",
+    "subtitle": "Pre-consulting Company Assessment Platform",
+    "footer": "Digital Diagnostic Questionnaire System - For Consulting Pre-assessment"
+  },
+  "nav": {
+    "backToDashboard": "← Dashboard",
+    "backToCompany": "← Back to Dashboard",
+    "backToQuestionnaire": "← Back to Questionnaire",
+    "exportReport": "📄 Export Report",
+    "sectionTabs": "Section Tabs"
+  },
+  "dashboard": {
+    "title": "Company Assessment Dashboard",
+    "subtitle": "Select a company to begin assessment or create a new one",
+    "companiesList": "Existing Companies",
+    "noCompanies": "No companies yet. Create your first assessment.",
+    "newAssessment": "New Assessment",
+    "companyName": "Company Name",
+    "industry": "Industry",
+    "size": "Size",
+    "lastUpdated": "Last Updated",
+    "actions": "Actions",
+    "continue": "Continue",
+    "delete": "Delete",
+    "confirmDelete": "Are you sure you want to delete this company?",
+    "loading": "Loading companies...",
+    "location": "Location",
+    "revenue": "Revenue",
+    "contact": "Contact",
+    "sections": "Questionnaire Sections",
+    "sectionsDesc": "Each assessment covers 10 key business areas:",
+    "sectionsDesc.company_profile": "Basic organizational information",
+    "sectionsDesc.swot": "Strengths, Weaknesses, Opportunities, Threats",
+    "sectionsDesc.strategic_planning": "Vision, goals, execution, OKRs",
+    "sectionsDesc.production_management": "Operations, lean, quality, OEE",
+    "sectionsDesc.sales_marketing": "Revenue generation, customer acquisition",
+    "sectionsDesc.rd_innovation": "Product development, IP, innovation culture",
+    "sectionsDesc.productivity": "Labor efficiency, automation, continuous improvement",
+    "sectionsDesc.waste_management": "Sustainability, circular economy, ESG",
+    "sectionsDesc.bcg": "Bioeconomy, circular economy, green economy",
+    "sectionsDesc.oee": "Overall Equipment Effectiveness, TPM"
+  },
+  "companyForm": {
+    "title": "New Company Assessment",
+    "subtitle": "Enter basic company information to begin",
+    "save": "Save & Start Assessment",
+    "cancel": "Cancel",
+    "saving": "Saving...",
+    "fields": {
+      "companyName": "Company Legal Name",
+      "industry": "Industry Sector",
+      "companySize": "Company Size (Employees)",
+      "foundedYear": "Year Founded",
+      "location": "Headquarters Location (City, Country)",
+      "website": "Company Website",
+      "annualRevenue": "Annual Revenue Range (USD)",
+      "ownershipType": "Ownership Type",
+      "contactPerson": "Primary Contact Person",
+      "contactEmail": "Contact Email",
+      "contactPhone": "Contact Phone"
+    },
+    "industries": {
+      "manufacturing": "Manufacturing",
+      "technology": "Technology",
+      "healthcare": "Healthcare",
+      "financialServices": "Financial Services",
+      "retail": "Retail",
+      "foodBeverage": "Food & Beverage",
+      "automotive": "Automotive",
+      "chemicals": "Chemicals",
+      "textiles": "Textiles",
+      "other": "Other"
+    },
+    "sizes": {
+      "1-10": "1-10",
+      "11-50": "11-50",
+      "51-200": "51-200",
+      "201-500": "201-500",
+      "501-1000": "501-1000",
+      "1001-5000": "1001-5000",
+      "5000+": "5000+"
+    },
+    "revenues": {
+      "lt1m": "<$1M",
+      "1m-10m": "$1M-$10M",
+      "10m-50m": "$10M-$50M",
+      "50m-100m": "$50M-$100M",
+      "100m-500m": "$100M-$500M",
+      "500m-1b": "$500M-$1B",
+      "gt1b": ">$1B"
+    },
+    "ownershipTypes": {
+      "private": "Private",
+      "public": "Public",
+      "familyOwned": "Family-owned",
+      "subsidiary": "Subsidiary",
+      "jointVenture": "Joint Venture",
+      "stateOwned": "State-owned",
+      "nonProfit": "Non-profit"
+    }
+  },
+  "questionnaire": {
+    "progress": "Progress",
+    "section": "Section",
+    "of": "of",
+    "required": "Required",
+    "optional": "Optional",
+    "next": "Next →",
+    "previous": "← Previous",
+    "save": "Save Progress",
+    "saving": "Saving...",
+    "saved": "Saved!",
+    "export": "Export Report",
+    "complete": "Complete Assessment",
+    "validationError": "Please complete all required fields",
+    "autoSave": "Auto-saving...",
+    "loadError": "Failed to load questionnaire",
+    "error": "Error",
+    "answered": "answered",
+    "completed": "completed",
+    "section_completed": "sections completed",
+    "prefilledFromCompany": "Company profile pre-filled from company data. Review and update as needed."
+  },
+  "export": {
+    "title": "Export Assessment Report",
+    "subtitle": "Generate and download your assessment report",
+    "htmlReport": "HTML Report",
+    "jsonData": "JSON Data",
+    "csvData": "CSV Data",
+    "downloadHtml": "Download HTML Report",
+    "downloadJson": "Download JSON",
+    "downloadCsv": "Download CSV",
+    "generating": "Generating...",
+    "reportPreview": "Report Preview",
+    "companyInfo": "Company Information",
+    "assessmentDate": "Assessment Date",
+    "sections": "Sections",
+    "score": "Score",
+    "answers": "Answers",
+    "selectFormat": "Select Export Format",
+    "htmlDesc": "Formatted report for viewing/printing",
+    "jsonDesc": "Complete data for integration",
+    "csvDesc": "For Excel/BI tool analysis",
+    "download": "Download",
+    "question": "Question",
+    "answerType": "Answer Type",
+    "questions": "questions",
+    "answered": "answered",
+    "basicExports": "Basic Exports",
+    "advancedReports": "Advanced Analysis Reports",
+    "wordReport": "MS Word Report",
+    "pdfReport": "PDF Report",
+    "wordDesc": "Professional report with radar charts, analysis & recommendations",
+    "pdfDesc": "Portable document with charts, scores & improvement roadmap",
+    "new": "NEW",
+    "reportGenerated": "Report generated successfully",
+    "generationFailed": "Report generation failed",
+    "generatingReport": "Generating comprehensive report with radar charts..."
+  },
+  "sections": {
+    "company_profile": "Company Profile",
+    "swot": "SWOT Analysis",
+    "strategic_planning": "Strategic Planning",
+    "production_management": "Production Management",
+    "sales_marketing": "Sales & Marketing",
+    "rd_innovation": "R&D and Innovation",
+    "productivity": "Productivity",
+    "waste_management": "Waste Management",
+    "bcg": "BCG (Bio-Circular-Green Economy)",
+    "oee": "OEE (Overall Equipment Effectiveness)"
+  },
+  "auth": {
+    "digitalDiagnostic": "Digital Diagnostic",
+    "subtitle": "Company Assessment Platform",
+    "login": "Login",
+    "register": "Register",
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "username": "Username",
+    "usernameOrEmail": "Username or Email",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "fullName": "Full Name",
+    "usernamePlaceholder": "Enter username",
+    "usernameOrEmailPlaceholder": "Enter username or email",
+    "emailPlaceholder": "Enter email",
+    "passwordPlaceholder": "Enter password",
+    "confirmPasswordPlaceholder": "Confirm password",
+    "fullNamePlaceholder": "Enter full name",
+    "usernameRequired": "Username or email is required",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Invalid email format",
+    "passwordRequired": "Password is required",
+    "passwordMinLength": "Password must be at least 6 characters",
+    "passwordsNotMatch": "Passwords do not match",
+    "nameRequired": "Full name is required",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "loading": "Please wait...",
+    "demoCredentials": "Demo Credentials:",
+    "admin": "Admin",
+    "user": "User",
+    "forgotPassword": "Forgot Password?",
+    "rememberMe": "Remember Me",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "logout": "Logout",
+    "profile": "Profile",
+    "adminPanel": "Admin Panel",
+    "changePassword": "Change Password",
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "updateProfile": "Update Profile",
+    "settings": "Settings",
+    "manageAccount": "Manage your account settings",
+    "usernameCannotChange": "Username cannot be changed",
+    "roleCannotChange": "Role can only be changed by administrators",
+    "memberSince": "Member Since",
+    "lastLogin": "Last Login",
+    "currentPasswordRequired": "Current password is required",
+    "newPasswordRequired": "New password is required",
+    "passwordChanged": "Password changed successfully",
+    "changing": "Changing...",
+    "profileUpdated": "Profile updated successfully",
+    "saving": "Saving...",
+    "passwordMinLengthHint": "At least 6 characters",
+    "confirmDeleteUser": "Are you sure you want to delete this user? This will also delete all their companies and reports.",
+    "adminPanel": "Admin Panel",
+    "adminSubtitle": "Manage users and monitor system",
+    "userManagement": "User Management",
+    "totalUsers": "Total Users",
+    "activeUsers": "Active Users",
+    "superusers": "Superusers",
+    "totalCompanies": "Total Companies",
+    "totalResponses": "Total Responses",
+    "totalReports": "Total Reports",
+    "recentLogins": "Logins (7 days)",
+    "userDetails": "User Details",
+    "accountInfo": "Account Information",
+    "companies": "Companies",
+    "reports": "Reports",
+    "company": "Company",
+    "format": "Format",
+    "filename": "Filename",
+    "size": "Size",
+    "created": "Created",
+    "name": "Name",
+    "industry": "Industry",
+    "location": "Location",
+    "status": "Status",
+    "actions": "Actions",
+    "role": "Role",
+    "active": "Active",
+    "inactive": "Inactive",
+    "view": "View",
+    "edit": "Edit",
+    "delete": "Delete",
+    "close": "Close",
+    "cancel": "Cancel",
+    "save": "Save",
+    "editUser": "Edit User",
+    "never": "Never",
+    "role.user": "User",
+    "role.superuser": "Superuser"
+  },
+  "common": {
+    "yes": "Yes",
+    "no": "No",
+    "select": "Select...",
+    "enterText": "Enter text...",
+    "selectOptions": "Select options...",
+    "rating": "Rating",
+    "textarea": "Text area",
+    "number": "Number",
+    "email": "Email",
+    "url": "URL",
+    "tel": "Phone",
+    "date": "Date",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "warning": "Warning",
+    "info": "Information",
+    "close": "Close",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View",
+    "download": "Download",
+    "upload": "Upload",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "refresh": "Refresh",
+    "print": "Print",
+    "share": "Share",
+    "copy": "Copy",
+    "paste": "Paste",
+    "cut": "Cut",
+    "undo": "Undo",
+    "redo": "Redo",
+    "selectAll": "Select All",
+    "deselectAll": "Deselect All",
+    "expandAll": "Expand All",
+    "collapseAll": "Collapse All",
+    "showMore": "Show More",
+    "showLess": "Show Less",
+    "previous": "Previous",
+    "next": "Next",
+    "first": "First",
+    "last": "Last",
+    "page": "Page",
+    "of": "of",
+    "itemsPerPage": "Items per page",
+    "totalItems": "Total items",
+    "noData": "No data available",
+    "noResults": "No options match",
+    "notSpecified": "Not specified",
+    "tryAgain": "Try Again",
+    "goBack": "Go Back",
+    "continue": "Continue",
+    "finish": "Finish",
+    "skip": "Skip",
+    "submit": "Submit",
+    "reset": "Reset",
+    "clear": "Clear",
+    "apply": "Apply",
+    "resetFilters": "Reset Filters",
+    "required": "Required",
+    "optional": "Optional",
+    "min": "Min",
+    "max": "Max",
+    "range": "Range",
+    "from": "From",
+    "to": "To",
+    "between": "Between",
+    "and": "And",
+    "or": "Or",
+    "not": "Not",
+    "equals": "Equals",
+    "notEquals": "Not Equals",
+    "contains": "Contains",
+    "startsWith": "Starts With",
+    "endsWith": "Ends With",
+    "greaterThan": "Greater Than",
+    "lessThan": "Less Than",
+    "greaterThanOrEqual": "Greater Than or Equal",
+    "lessThanOrEqual": "Less Than or Equal",
+    "isEmpty": "Is Empty",
+    "isNotEmpty": "Is Not Empty",
+    "isNull": "Is Null",
+    "isNotNull": "Is Not Null",
+    "true": "True",
+    "false": "False",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "active": "Active",
+    "inactive": "Inactive",
+    "pending": "Pending",
+    "completed": "Completed",
+    "failed": "Failed",
+    "cancelled": "Cancelled",
+    "draft": "Draft",
+    "published": "Published",
+    "archived": "Archived",
+    "deleted": "Deleted",
+    "created": "Created",
+    "updated": "Updated",
+    "deletedAt": "Deleted At",
+    "createdAt": "Created At",
+    "updatedAt": "Updated At"
+  },
+  "validation": {
+    "required": "This field is required",
+    "email": "Please enter a valid email address",
+    "url": "Please enter a valid URL",
+    "number": "Please enter a valid number",
+    "integer": "Please enter a valid integer",
+    "positive": "Please enter a positive number",
+    "minLength": "Minimum {{min}} characters required",
+    "maxLength": "Maximum {{max}} characters allowed",
+    "minValue": "Minimum value is {{min}}",
+    "maxValue": "Maximum value is {{max}}",
+    "pattern": "Invalid format",
+    "custom": "Invalid value"
+  },
+  "swot": {
+    "strengths": "Strengths",
+    "weaknesses": "Weaknesses",
+    "opportunities": "Opportunities",
+    "threats": "Threats",
+    "synthesis": "SWOT Synthesis",
+    "categories": {
+      "strengths": "Strengths",
+      "weaknesses": "Weaknesses",
+      "opportunities": "Opportunities",
+      "threats": "Threats"
+    }
+  },
+  "bcg": {
+    "bioeconomy": "Bioeconomy",
+    "circularEconomy": "Circular Economy",
+    "greenEconomy": "Green Economy",
+    "integrationGovernance": "Integration & Governance",
+    "categories": {
+      "bioeconomy": "Bioeconomy",
+      "circularEconomy": "Circular Economy",
+      "greenEconomy": "Green Economy",
+      "integrationGovernance": "Integration & Governance"
+    }
+  },
+  "questions": {
+    "company_profile": {
+      "company_name": {
+        "text": "Company Legal Name",
+        "explanation": "Enter the full legal name of the company as registered with government authorities."
+      },
+      "industry": {
+        "text": "Industry Sector",
+        "explanation": "Select the primary industry sector that best describes your company's core business activities.",
+        "options": [
+          "Manufacturing",
+          "Technology",
+          "Healthcare",
+          "Financial Services",
+          "Retail",
+          "Food & Beverage",
+          "Automotive",
+          "Chemicals",
+          "Textiles",
+          "Other"
+        ]
+      },
+      "company_size": {
+        "text": "Company Size (Employees)",
+        "explanation": "Total number of full-time equivalent employees across all locations. This helps contextualize operational complexity.",
+        "options": [
+          "1-10",
+          "11-50",
+          "51-200",
+          "201-500",
+          "501-1000",
+          "1001-5000",
+          "5000+"
+        ]
+      },
+      "founded_year": {
+        "text": "Year Founded",
+        "explanation": "The year the company was legally established. Indicates organizational maturity and legacy considerations."
+      },
+      "location": {
+        "text": "Headquarters Location (City, Country)",
+        "explanation": "Primary headquarters location. Important for regulatory, talent, and market access context."
+      },
+      "website": {
+        "text": "Company Website",
+        "explanation": "Public-facing website URL. Used to understand digital presence and branding."
+      },
+      "annual_revenue": {
+        "text": "Annual Revenue Range (THB บาท)",
+        "explanation": "Approximate annual revenue in Thai Baht (บาท). Helps assess scale, investment capacity, and benchmark against peers.",
+        "options": [
+          "<฿50M",
+          "฿50M-฿200M",
+          "฿200M-฿500M",
+          "฿500M-฿1B",
+          "฿1B-฿5B",
+          "฿5B-฿10B",
+          ">฿10B"
+        ]
+      },
+      "ownership_type": {
+        "text": "Ownership Type",
+        "explanation": "Ownership structure affects governance, decision-making speed, capital access, and strategic horizons.",
+        "options": [
+          "Private",
+          "Public",
+          "Family-owned",
+          "Subsidiary",
+          "Joint Venture",
+          "State-owned",
+          "Non-profit"
+        ]
+      },
+      "contact_person": {
+        "text": "Primary Contact Person",
+        "explanation": "Name of the main point of contact for this assessment. Should be a senior leader with cross-functional visibility."
+      },
+      "contact_email": {
+        "text": "Contact Email",
+        "explanation": "Business email for the primary contact. Used for assessment communications and report delivery."
+      },
+      "contact_phone": {
+        "text": "Contact Phone",
+        "explanation": "Direct phone number for the primary contact (include country code)."
+      }
+    },
+    "swot": {
+      "strengths_core_competencies": {
+        "text": "Core Competency Areas",
+        "explanation": "Select all areas where your organization has distinctive, hard-to-replicate capabilities that create competitive advantage.",
+        "options": [
+          "Manufacturing/Operations Excellence",
+          "R&D and Innovation",
+          "Brand and Marketing",
+          "Sales and Distribution",
+          "Supply Chain Management",
+          "Technology and Digital",
+          "Customer Service",
+          "Financial Management",
+          "Talent Development",
+          "Sustainability/ESG",
+          "Regulatory Compliance",
+          "Other"
+        ]
+      },
+      "strengths_brand_reputation": {
+        "text": "Brand Reputation Strength (1-10)",
+        "explanation": "Rate overall brand perception among customers, partners, and industry. Consider brand awareness, trust, premium pricing ability, and employer brand."
+      },
+      "strengths_financial_resources": {
+        "text": "Financial Resources and Access to Capital",
+        "explanation": "Assess cash reserves, credit lines, investor relationships, and ability to fund growth initiatives, acquisitions, or weather downturns.",
+        "options": [
+          "Excellent",
+          "Good",
+          "Adequate",
+          "Limited",
+          "Critical"
+        ]
+      },
+      "strengths_talent": {
+        "text": "Quality and Retention of Key Talent",
+        "explanation": "Evaluate ability to attract, develop, and retain top performers. Consider turnover rates, employer brand, leadership pipeline, and critical role coverage.",
+        "options": [
+          "Excellent",
+          "Good",
+          "Average",
+          "Below Average",
+          "Poor"
+        ]
+      },
+      "strengths_technology_ip": {
+        "text": "Technology/IP Strength Areas",
+        "explanation": "Select all technology and intellectual property assets that create barriers to entry for competitors.",
+        "options": [
+          "Patents and IP Portfolio",
+          "Proprietary Algorithms/Software",
+          "Unique Manufacturing Processes",
+          "Trade Secrets/Know-how",
+          "Digital Platforms/Tools",
+          "Data Assets",
+          "R&D Capabilities",
+          "None Significant"
+        ]
+      },
+      "strengths_operational_efficiency": {
+        "text": "Operational Efficiency vs. Competitors",
+        "explanation": "Compare your cost structure, cycle times, asset utilization, and productivity metrics against industry benchmarks and key competitors.",
+        "options": [
+          "Industry Leader",
+          "Above Average",
+          "Average",
+          "Below Average",
+          "Lagging"
+        ]
+      },
+      "strengths_customer_loyalty": {
+        "text": "Customer Loyalty and Retention Rate",
+        "explanation": "Measure customer retention, repeat purchase rate, net revenue retention, and switching costs. High loyalty reduces CAC and stabilizes revenue.",
+        "options": [
+          "Very High (>90%)",
+          "High (70-90%)",
+          "Moderate (50-70%)",
+          "Low (30-50%)",
+          "Very Low (<30%)"
+        ]
+      },
+      "strengths_supply_chain": {
+        "text": "Supply Chain Reliability and Partner Relationships",
+        "explanation": "Assess supplier diversification, strategic partnerships, visibility, risk management, and ability to maintain continuity during disruptions.",
+        "options": [
+          "Very Strong",
+          "Strong",
+          "Moderate",
+          "Weak",
+          "Very Weak"
+        ]
+      },
+      "strengths_other": {
+        "text": "Other Key Strengths",
+        "explanation": "Select any additional strengths not covered above.",
+        "options": [
+          "Regulatory Advantages",
+          "Unique Distribution Channels",
+          "Strong Organizational Culture",
+          "Strategic Location Benefits",
+          "Valuable Data Assets",
+          "Strategic Partnerships/Alliances",
+          "None"
+        ]
+      },
+      "weaknesses_skill_gaps": {
+        "text": "Critical Skill Gap Areas",
+        "explanation": "Select all missing capabilities needed for current and future strategy.",
+        "options": [
+          "Digital/Data Science Skills",
+          "Technical/Engineering Expertise",
+          "Leadership/Management",
+          "Sales/Business Development",
+          "Operations/Lean Manufacturing",
+          "R&D/Innovation",
+          "Sustainability/ESG",
+          "Regulatory/Compliance",
+          "Cybersecurity",
+          "Project Management",
+          "Other"
+        ]
+      },
+      "weaknesses_legacy_systems": {
+        "text": "Legacy Systems Burden",
+        "explanation": "Outdated software/systems that are difficult to update, slow to fix bugs, costly to maintain, and limit your ability to add new features or adopt new technology.",
+        "options": [
+          "Minimal",
+          "Moderate",
+          "Significant",
+          "Severe",
+          "Critical"
+        ]
+      },
+      "weaknesses_financial_constraints": {
+        "text": "Financial Constraints or High Debt Levels",
+        "explanation": "Assess debt-to-equity, interest coverage, covenant restrictions, and limited free cash flow that constrain strategic investments.",
+        "options": [
+          "None",
+          "Minor",
+          "Moderate",
+          "Significant",
+          "Severe"
+        ]
+      },
+      "weaknesses_process_inefficiencies": {
+        "text": "Key Process Inefficiency Types",
+        "explanation": "Select all process issues that reduce speed and increase cost.",
+        "options": [
+          "Manual Handoffs/Paper-based",
+          "Redundant/Duplicate Steps",
+          "Approval Delays/Bottlenecks",
+          "Quality Issues/Rework",
+          "Capacity Constraints",
+          "Long Changeover Times",
+          "Poor Scheduling/Planning",
+          "Lack of Standardization",
+          "Other"
+        ]
+      },
+      "weaknesses_market_presence": {
+        "text": "Market Presence Gaps",
+        "explanation": "Select all areas where competitors have stronger foothold or you lack presence.",
+        "options": [
+          "Geographic Regions Underserved",
+          "Customer Segments Not Covered",
+          "Product Categories Missing",
+          "Digital/Online Presence Weak",
+          "Channel Partner Gaps",
+          "Brand Awareness Low",
+          "Other"
+        ]
+      },
+      "weaknesses_innovation_pipeline": {
+        "text": "Innovation Pipeline Strength",
+        "explanation": "Evaluate the quantity, quality, and strategic alignment of projects in your innovation funnel from ideation to commercialization.",
+        "options": [
+          "Strong Pipeline",
+          "Adequate",
+          "Limited",
+          "Weak",
+          "Non-existent"
+        ]
+      },
+      "weaknesses_org_structure": {
+        "text": "Organizational Structure Issues",
+        "explanation": "Assess cross-functional collaboration, decision-making speed, accountability clarity, and adaptability to change.",
+        "options": [
+          "Agile",
+          "Functional",
+          "Some Silos",
+          "Heavy Silos",
+          "Dysfunctional"
+        ]
+      },
+      "weaknesses_data_analytics": {
+        "text": "Data Analytics and BI Capability Level",
+        "explanation": "How well does your organization use data? Assess: data infrastructure (warehouses, lakes), analytics tools (Excel, BI, AI), self-service reporting (can staff get reports without IT?), predictive modeling (forecasting), and data-driven culture (decisions based on data, not gut feel).",
+        "options": [
+          "Advanced",
+          "Developing",
+          "Basic",
+          "Minimal",
+          "None"
+        ]
+      },
+      "weaknesses_other": {
+        "text": "Other Key Weaknesses",
+        "explanation": "Select additional weaknesses not covered above.",
+        "options": [
+          "Brand Perception Gaps",
+          "Customer Concentration Risk",
+          "Key Person Dependency",
+          "Compliance Issues",
+          "Aging Workforce",
+          "High Cost Structure",
+          "Inadequate IT Infrastructure",
+          "None"
+        ]
+      },
+      "opportunities_market_growth": {
+        "text": "Market Growth Opportunity Types",
+        "explanation": "Select all market growth trends aligned with your capabilities that you can capitalize on.",
+        "options": [
+          "Expanding Core Markets",
+          "Rising Customer Needs",
+          "Demographic Shifts",
+          "Industry Tailwinds",
+          "New Application Areas",
+          "Government Stimulus/Incentives",
+          "Other"
+        ]
+      },
+      "opportunities_new_markets": {
+        "text": "New Market Expansion Opportunities",
+        "explanation": "Select all new markets or segments you could target with existing or adapted offerings.",
+        "options": [
+          "New Geographic Markets",
+          "New Customer Segments",
+          "Adjacent Product Categories",
+          "International Expansion",
+          "Underserved Niche Segments",
+          "Channel Expansion",
+          "Other"
+        ]
+      },
+      "opportunities_technology": {
+        "text": "Emerging Technology Adoption Opportunities",
+        "explanation": "Select specific technologies that could transform your products, operations, or business model.",
+        "options": [
+          "Generative AI",
+          "Industrial IoT/IIoT",
+          "Robotics/Automation",
+          "Digital Twins",
+          "Blockchain",
+          "Additive Manufacturing/3D Printing",
+          "Advanced Analytics/ML",
+          "AR/VR",
+          "Quantum Computing",
+          "Other"
+        ]
+      },
+      "opportunities_partnerships": {
+        "text": "Strategic Partnership/M&A Opportunities",
+        "explanation": "Select all partnership types that could accelerate your strategy.",
+        "options": [
+          "Technology Partnerships",
+          "Channel/Go-to-Market Partnerships",
+          "Co-development/R&D Partnerships",
+          "M&A Acquisition Targets",
+          "Joint Ventures",
+          "University/Research Collaborations",
+          "Startup Investments/Corporate VC",
+          "Other"
+        ]
+      },
+      "opportunities_regulatory": {
+        "text": "Regulatory-Driven Opportunities",
+        "explanation": "Select regulatory shifts that create new markets or favor your capabilities.",
+        "options": [
+          "Sustainability Mandates",
+          "Data Regulations",
+          "Trade Policy Changes",
+          "Industry-Specific Regulations",
+          "Government Procurement Preferences",
+          "Carbon Pricing/Incentives",
+          "Other"
+        ]
+      },
+      "opportunities_sustainability": {
+        "text": "Sustainability/ESG Market Opportunities",
+        "explanation": "Select all sustainability-driven opportunities relevant to your business.",
+        "options": [
+          "Green Premium Pricing",
+          "Circular Economy Models",
+          "Carbon Credits/Trading",
+          "ESG-Focused Customer Demand",
+          "Sustainable Finance Access",
+          "Regulatory Compliance Advantage",
+          "Other"
+        ]
+      },
+      "opportunities_digital_transformation": {
+        "text": "Digital Transformation Opportunities",
+        "explanation": "Select all digital opportunities to create new value or improve operations.",
+        "options": [
+          "Product/Service Digitization",
+          "Platform Business Models",
+          "Data Monetization",
+          "New Digital Channels",
+          "Process Automation",
+          "Customer Experience Enhancement",
+          "Supply Chain Digitization",
+          "Other"
+        ]
+      },
+      "opportunities_other": {
+        "text": "Other Opportunities",
+        "explanation": "Select any other opportunities not covered above.",
+        "options": [
+          "Competitor Exits",
+          "Supply Chain Localization",
+          "Talent Availability Shifts",
+          "Economic Policy Changes",
+          "Infrastructure Investments",
+          "None"
+        ]
+      },
+      "threats_competition": {
+        "text": "Competitive Threat Types",
+        "explanation": "Select all competitive threats facing your business.",
+        "options": [
+          "Disruptive New Entrants",
+          "Substitute Technologies",
+          "Price Wars",
+          "Platform Players Entering Market",
+          "Competitor Consolidation",
+          "Competitor Innovation",
+          "Loss of Key Accounts",
+          "Other"
+        ]
+      },
+      "threats_economic": {
+        "text": "Economic/Macroeconomic Threats",
+        "explanation": "Select all macroeconomic threats affecting demand or margins.",
+        "options": [
+          "Recession Risk",
+          "High Inflation",
+          "Rising Interest Rates",
+          "Currency Volatility",
+          "Commodity Price Exposure",
+          "Supply Chain Cost Increases",
+          "Reduced Customer Spending",
+          "Other"
+        ]
+      },
+      "threats_regulatory": {
+        "text": "Regulatory/Compliance Threats",
+        "explanation": "Select all regulatory threats that increase costs or restrict operations.",
+        "options": [
+          "Stricter Environmental Regulations",
+          "Data Privacy Laws",
+          "Labor Law Changes",
+          "Trade Barriers/Tariffs",
+          "Industry-Specific Compliance",
+          "Reporting Requirements (CSRD, etc.)",
+          "Carbon Taxes/Border Adjustments",
+          "Other"
+        ]
+      },
+      "threats_supply_chain": {
+        "text": "Supply Chain Disruption Risk",
+        "explanation": "Assess single-source dependencies, geographic concentration, geopolitical risks, and logistics vulnerabilities.",
+        "options": [
+          "Very Low",
+          "Low",
+          "Moderate",
+          "High",
+          "Very High"
+        ]
+      },
+      "threats_technology_disruption": {
+        "text": "Technology Disruption Risk to Business Model",
+        "explanation": "Evaluate risk of obsolescence from AI, automation, new materials, business model innovation, or shifting customer expectations.",
+        "options": [
+          "Very Low",
+          "Low",
+          "Moderate",
+          "High",
+          "Very High"
+        ]
+      },
+      "threats_talent_shortage": {
+        "text": "Talent Shortage in Critical Roles",
+        "explanation": "Assess difficulty hiring/retaining specialized talent (engineers, data scientists, skilled trades) and impact on execution.",
+        "options": [
+          "Not an Issue",
+          "Minor",
+          "Moderate",
+          "Significant",
+          "Critical"
+        ]
+      },
+      "threats_cybersecurity": {
+        "text": "Cybersecurity and Data Privacy Risk Level",
+        "explanation": "Evaluate maturity of security posture, incident response, data protection compliance, and supply chain cyber risk.",
+        "options": [
+          "Well Protected",
+          "Adequate",
+          "Some Gaps",
+          "Significant Risk",
+          "Critical Risk"
+        ]
+      },
+      "threats_other": {
+        "text": "Other Threats",
+        "explanation": "Select additional threats not covered above.",
+        "options": [
+          "Climate/Physical Risk",
+          "Activist Investors",
+          "Key Customer Loss",
+          "Intellectual Property Disputes",
+          "Reputation Risk",
+          "Geopolitical Instability",
+          "None"
+        ]
+      },
+      "swot_priority_actions": {
+        "text": "Priority Action Focus Areas",
+        "explanation": "Select the top 3-5 focus areas for priority actions from your SWOT analysis.",
+        "options": [
+          "Leverage Core Strengths",
+          "Address Critical Weaknesses",
+          "Capture Key Opportunities",
+          "Mitigate Major Threats",
+          "Build New Capabilities",
+          "Strategic Partnerships",
+          "Digital Transformation",
+          "Sustainability/ESG",
+          "Talent Development",
+          "Operational Excellence"
+        ]
+      },
+      "swot_strategic_fit": {
+        "text": "Strategy-SWOT Alignment (1-10)",
+        "explanation": "Rate alignment between your current strategic plan and SWOT findings. Low scores indicate strategy needs recalibration."
+      }
+    },
+    "strategic_planning": {
+      "vision_statement": {
+        "text": "Vision Statement Status",
+        "explanation": "Assess if vision describes desired future state (3-10 years), is aspirational, clear, and guides long-term decisions.",
+        "options": [
+          "Clearly Defined & Communicated",
+          "Defined but Not Well Communicated",
+          "In Development",
+          "Outdated/Needs Revision",
+          "None"
+        ]
+      },
+      "mission_statement": {
+        "text": "Mission Statement Status",
+        "explanation": "Assess if mission defines core purpose: what you do, for whom, and how you create value. Should be actionable and differentiating.",
+        "options": [
+          "Clearly Defined & Communicated",
+          "Defined but Not Well Communicated",
+          "In Development",
+          "Outdated/Needs Revision",
+          "None"
+        ]
+      },
+      "core_values": {
+        "text": "Core Values Status",
+        "explanation": "Assess if 3-5 values drive behavior and decision-making, with definitions, and are lived not just posted.",
+        "options": [
+          "Defined, Lived & Measured",
+          "Defined & Communicated",
+          "Defined but Not Embedded",
+          "In Development",
+          "None/Generic"
+        ]
+      },
+      "strategic_horizon": {
+        "text": "Strategic Planning Horizon",
+        "explanation": "Primary timeframe for strategic plan. Longer horizons (3-5+ years) indicate mature strategic thinking; shorter may indicate reactivity.",
+        "options": [
+          "1 year",
+          "2-3 years",
+          "3-5 years",
+          "5+ years"
+        ]
+      },
+      "strategic_priorities": {
+        "text": "Strategic Priorities Definition Level",
+        "explanation": "Assess if top 3-5 priorities are specific (e.g., 'Expand APAC revenue to $50M'), measurable, with owners and timelines.",
+        "options": [
+          "Specific, Measurable, Owned & Timed",
+          "Specific & Measurable",
+          "Defined but Not Fully Measured",
+          "High-level Only",
+          "Not Defined"
+        ]
+      },
+      "kpis_defined": {
+        "text": "KPIs Defined and Cascaded",
+        "explanation": "Assess if each priority has leading/lagging KPIs with targets, and if they cascade to team/individual levels for accountability.",
+        "options": [
+          "Fully Defined & Cascaded",
+          "Partially Defined",
+          "Defined but Not Cascaded",
+          "Not Defined"
+        ]
+      },
+      "strategy_review_frequency": {
+        "text": "Strategy Review Frequency",
+        "explanation": "Frequency of formal strategy reviews with leadership. Quarterly is best practice for agility; annual-only suggests rigidity.",
+        "options": [
+          "Monthly",
+          "Quarterly",
+          "Semi-annually",
+          "Annually",
+          "Ad-hoc Only"
+        ]
+      },
+      "okr_adoption": {
+        "text": "OKR Adoption Level",
+        "explanation": "OKRs align teams to strategy through measurable outcomes. Full implementation means company-wide, quarterly cycles with transparent tracking.",
+        "options": [
+          "Fully Implemented",
+          "Pilot Phase",
+          "Planning to Adopt",
+          "Not Using"
+        ]
+      },
+      "resource_allocation": {
+        "text": "Resource Allocation Process",
+        "explanation": "Formal portfolio process = stage-gated funding with ROI hurdles. Annual budgeting = incremental. Ad-hoc = reactive, often misaligned.",
+        "options": [
+          "Formal Portfolio Process",
+          "Annual Budgeting",
+          "Ad-hoc",
+          "Not Systematic"
+        ]
+      },
+      "scenario_planning": {
+        "text": "Scenario Planning Practice",
+        "explanation": "Regular scenario planning (3-4 scenarios) builds resilience. Assesses impact of economic, technological, regulatory, or competitive shifts on strategy.",
+        "options": [
+          "Yes, Regularly",
+          "Occasionally",
+          "Rarely",
+          "Never"
+        ]
+      },
+      "competitive_positioning": {
+        "text": "Competitive Positioning Strategy",
+        "explanation": "Per Porter's generic strategies. 'Stuck in Middle' = no clear advantage. Transitioning = deliberately shifting position.",
+        "options": [
+          "Cost Leadership",
+          "Differentiation",
+          "Focus/Niche",
+          "Stuck in Middle",
+          "Transitioning"
+        ]
+      },
+      "strategy_execution_score": {
+        "text": "Strategy Execution Effectiveness (1-10)",
+        "explanation": "Honest assessment: % of strategic initiatives completed on time/budget, % of KPIs met, and organizational alignment. Below 6 signals execution gaps."
+      },
+      "strategy_communication": {
+        "text": "Strategy Communication Effectiveness",
+        "explanation": "Test: Can frontline employees articulate top 3 priorities and their role? Poor communication is a top cause of execution failure.",
+        "options": [
+          "Excellent - Everyone Knows It",
+          "Good - Managers Know It",
+          "Fair - Leadership Knows It",
+          "Poor - Unclear"
+        ]
+      },
+      "change_management": {
+        "text": "Change Management Capability",
+        "explanation": "Assess structured approach: sponsorship, communication, training, resistance management, and reinforcement for strategic changes.",
+        "options": [
+          "Strong",
+          "Developing",
+          "Basic",
+          "Weak",
+          "Non-existent"
+        ]
+      },
+      "strategic_risks": {
+        "text": "Strategic Risk Management",
+        "explanation": "Assess if top 3 strategic risks (market, technology, execution, financial) have likelihood, impact, owner, and specific mitigation actions.",
+        "options": [
+          "Formal Risk Register with Mitigations",
+          "Identified but Not Formalized",
+          "Ad-hoc Awareness",
+          "Not Systematically Managed"
+        ]
+      }
+    },
+    "production_management": {
+      "production_type": {
+        "text": "Production Type",
+        "explanation": "MTS = forecast-driven inventory. MTO = build after order. ETO = custom engineering per order. ATO = configure standard modules. Process = continuous/batch (chemicals, food). Job Shop = high mix, low volume.",
+        "options": [
+          "Make-to-Stock (MTS)",
+          "Make-to-Order (MTO)",
+          "Engineer-to-Order (ETO)",
+          "Assemble-to-Order (ATO)",
+          "Mixed Mode",
+          "Process Manufacturing",
+          "Job Shop"
+        ]
+      },
+      "num_facilities": {
+        "text": "Number of Production Facilities",
+        "explanation": "Total manufacturing sites globally. Impacts complexity, coordination, standardization, and supply chain footprint."
+      },
+      "total_capacity_utilization": {
+        "text": "Overall Capacity Utilization (%)",
+        "explanation": "Actual output / theoretical maximum capacity. 85-95% is typical target; >95% risks bottlenecks, <70% indicates underutilized assets."
+      },
+      "production_scheduling": {
+        "text": "Production Scheduling Method",
+        "explanation": "APS = optimization algorithms for complex constraints. ERP/MRP = standard. Kanban = pull-based. Manual = error-prone. TOC = bottleneck-focused.",
+        "options": [
+          "Advanced Planning & Scheduling (APS)",
+          "ERP/MRP based",
+          "Kanban/Pull",
+          "Spreadsheet/Manual",
+          "Theory of Constraints"
+        ]
+      },
+      "lean_maturity": {
+        "text": "Lean Manufacturing Maturity Level",
+        "explanation": "World Class = lean culture, continuous flow, pull systems, standard work everywhere. Basic = 5S and some Kaizen. Assess honestly.",
+        "options": [
+          "World Class",
+          "Advanced",
+          "Intermediate",
+          "Basic",
+          "Just Starting",
+          "Not Implemented"
+        ]
+      },
+      "lean_tools_used": {
+        "text": "Lean Tools Currently in Use",
+        "explanation": "Select all actively used (not just tried once). SMED = quick changeover. TPM = autonomous maintenance. Hoshin = strategy deployment.",
+        "options": [
+          "5S",
+          "Value Stream Mapping",
+          "Kaizen",
+          "Kanban",
+          "SMED",
+          "TPM",
+          "Standard Work",
+          "Heijunka",
+          "Poka-Yoke",
+          "Andon",
+          "Gemba Walks",
+          "Hoshin Kanri"
+        ]
+      },
+      "quality_system": {
+        "text": "Quality Management System",
+        "explanation": "Formal certification indicates disciplined processes. IATF 16949 = automotive. ISO 13485 = medical. AS9100 = aerospace. Six Sigma = statistical process control.",
+        "options": [
+          "ISO 9001",
+          "IATF 16949",
+          "ISO 13485",
+          "AS9100",
+          "Six Sigma",
+          "Internal System Only",
+          "None Formal"
+        ]
+      },
+      "defect_rate": {
+        "text": "Current Defect Rate (PPM or %)",
+        "explanation": "Parts per Million (PPM) or percentage of units failing quality standards. World-class < 100 PPM. Track internal + customer-reported."
+      },
+      "first_pass_yield": {
+        "text": "First Pass Yield (%)",
+        "explanation": "% of units passing all quality checks without rework on first attempt. FPY > 95% is strong; < 90% indicates process instability."
+      },
+      "scrap_rework_cost": {
+        "text": "Scrap & Rework as % of Revenue",
+        "explanation": "Total cost of scrap, rework, warranty, returns / revenue. Best-in-class < 1%. > 5% signals systemic quality issues."
+      },
+      "inventory_turns": {
+        "text": "Inventory Turns per Year",
+        "explanation": "COGS / Average Inventory. Higher = better cash flow, less obsolescence. Industry-specific: 12+ for electronics, 4-6 for heavy machinery."
+      },
+      "wip_levels": {
+        "text": "Work-in-Process (WIP) Levels",
+        "explanation": "WIP ties up cash, increases lead time, hides quality issues. Optimized = minimal WIP per Little's Law (WIP = Throughput × Cycle Time).",
+        "options": [
+          "Optimized",
+          "Moderate",
+          "High",
+          "Excessive",
+          "Unknown"
+        ]
+      },
+      "maintenance_strategy": {
+        "text": "Maintenance Strategy",
+        "explanation": "PdM = IoT sensors + AI prediction. PM = time-based. CBM = vibration/oil analysis. Reactive = highest cost/downtime. TPM = operator involvement.",
+        "options": [
+          "Predictive (PdM)",
+          "Preventive (PM)",
+          "Condition-based (CBM)",
+          "Reactive/Breakdown",
+          "RCM (Reliability Centered)",
+          "TPM"
+        ]
+      },
+      "equipment_availability": {
+        "text": "Equipment Availability (%)",
+        "explanation": "Actual running time / scheduled time. World-class > 90%. Includes planned + unplanned downtime. Key OEE component."
+      },
+      "changeover_time": {
+        "text": "Average Changeover/Setup Time",
+        "explanation": "Time from last good part of previous run to first good part of next run. SMED target: < 10 min (single-digit minutes)."
+      },
+      "production_lead_time": {
+        "text": "Average Production Lead Time",
+        "explanation": "Order release to shipment. Includes wait, move, queue, setup, run times. Shorter = more responsive, less WIP, better quality."
+      },
+      "on_time_delivery": {
+        "text": "On-Time Delivery to Customer (%)",
+        "explanation": "% of orders delivered by promised date. > 95% is competitive. Track by customer, product line, and root cause of misses."
+      },
+      "production_kpis": {
+        "text": "Key Production KPIs Tracked Regularly",
+        "explanation": "Select KPIs reviewed at least weekly with visual management. OEE = Availability × Performance × Quality (gold standard).",
+        "options": [
+          "OEE",
+          "FPY",
+          "Cycle Time",
+          "Throughput",
+          "Capacity Utilization",
+          "On-time Delivery",
+          "Scrap Rate",
+          "Rework Rate",
+          "Labor Productivity",
+          "Energy per Unit",
+          "Schedule Adherence",
+          "Changeover Time"
+        ]
+      },
+      "digital_manufacturing": {
+        "text": "Digital Manufacturing / Industry 4.0 Adoption",
+        "explanation": "Advanced = digital twins, AI optimization, autonomous systems. Connected = real-time data from machines. Automated = MES/SCADA. Basic = ERP only.",
+        "options": [
+          "Advanced (Digital Twin, AI)",
+          "Connected (IIoT, Real-time)",
+          "Automated (MES, SCADA)",
+          "Basic (ERP, Barcode)",
+          "Manual/Paper-based"
+        ]
+      },
+      "bottlenecks": {
+        "text": "Primary Bottleneck Types",
+        "explanation": "Select all constraint types currently limiting throughput.",
+        "options": [
+          "Machine/Equipment Capacity",
+          "Specific Process Step",
+          "Labor/Skill Shortage",
+          "Material Availability",
+          "Quality Inspection",
+          "Changeover/Setup",
+          "Scheduling/Planning",
+          "Space/Layout Constraints",
+          "Other"
+        ]
+      },
+      "production_improvement_priorities": {
+        "text": "Production Improvement Focus Areas",
+        "explanation": "Select top 3-5 prioritized improvement initiatives.",
+        "options": [
+          "Reduce Changeover Times (SMED)",
+          "Implement Predictive Maintenance",
+          "Increase OEE",
+          "Reduce Scrap/Rework",
+          "Improve First Pass Yield",
+          "Reduce Lead Time",
+          "Optimize Inventory/WIP",
+          "Digital Manufacturing/Industry 4.0",
+          "Lean/CI Program Enhancement",
+          "Workforce Upskilling",
+          "Energy Efficiency",
+          "Other"
+        ]
+      }
+    },
+    "sales_marketing": {
+      "sales_model": {
+        "text": "Primary Sales Model",
+        "explanation": "Primary go-to-market motion. Hybrid = multiple models. Subscription/SaaS = recurring revenue. Project-based = complex, long-cycle deals.",
+        "options": [
+          "Direct Sales",
+          "Channel/Partner",
+          "E-commerce/Direct",
+          "Inside Sales",
+          "Field Sales",
+          "Hybrid",
+          "Subscription/SaaS",
+          "Project-based"
+        ]
+      },
+      "sales_team_size": {
+        "text": "Sales Team Size (FTEs)",
+        "explanation": "Total quota-carrying reps (AEs, SDRs, AMs). Exclude support/ops. Ratio of reps to revenue indicates productivity."
+      },
+      "marketing_team_size": {
+        "text": "Marketing Team Size (FTEs)",
+        "explanation": "Total marketing FTEs (demand gen, product marketing, brand, ops, content). Typical ratio: 1 marketer per 3-5 sales reps."
+      },
+      "annual_marketing_budget": {
+        "text": "Annual Marketing Budget (% of Revenue)",
+        "explanation": "Total marketing spend / revenue. B2B typical: 5-10%. High-growth: 15-30%. Include people, programs, tech, agencies."
+      },
+      "target_markets": {
+        "text": "Target Market Definition",
+        "explanation": "Assess if target segments are defined by industry, company size, geography, buyer persona, use case, prioritized by TAM, win rate, and strategic fit.",
+        "options": [
+          "Well-defined with Personas & TAM",
+          "Defined but Lacking Detail",
+          "High-level Only",
+          "Not Formally Defined"
+        ]
+      },
+      "value_proposition": {
+        "text": "Value Proposition Clarity",
+        "explanation": "Assess if value prop clearly states: target customer, problem solved, unique benefit, proof. Format: 'For [segment], [product] provides [benefit] unlike [alternative] by [differentiator].'",
+        "options": [
+          "Clear, Differentiated & Tested",
+          "Clear but Not Tested",
+          "Defined but Generic",
+          "Unclear/Inconsistent"
+        ]
+      },
+      "brand_positioning": {
+        "text": "Brand Positioning Clarity",
+        "explanation": "Assess if positioning includes frame of reference, point of difference, and reason to believe vs. competitors.",
+        "options": [
+          "Clear & Differentiated",
+          "Defined but Not Differentiated",
+          "Generic/Commodity",
+          "Not Defined"
+        ]
+      },
+      "lead_generation_channels": {
+        "text": "Primary Lead Generation Channels",
+        "explanation": "Select top 3-5 channels by volume and quality. Track cost per lead and conversion by channel for optimization.",
+        "options": [
+          "Inbound/Content",
+          "Paid Search",
+          "Paid Social",
+          "Email Marketing",
+          "Events/Trade Shows",
+          "Referrals",
+          "Partner/Channel",
+          "Cold Outreach",
+          "ABM",
+          "SEO/Organic"
+        ]
+      },
+      "marketing_qualified_leads": {
+        "text": "Monthly Marketing Qualified Leads (MQLs)",
+        "explanation": "Leads meeting demographic/firmographic + engagement criteria. Definition must be agreed with sales. Track trend and quality."
+      },
+      "sales_qualified_leads": {
+        "text": "Monthly Sales Qualified Leads (SQLs)",
+        "explanation": "MQLs vetted by sales (BANT/MEDDIC). SQL volume indicates marketing-sales handoff effectiveness."
+      },
+      "mql_to_sql_conversion": {
+        "text": "MQL to SQL Conversion Rate (%)",
+        "explanation": "SQLs / MQLs. Low rate = poor lead quality or misaligned criteria. Benchmark: 15-30% for B2B."
+      },
+      "sql_to_opportunity": {
+        "text": "SQL to Opportunity Conversion Rate (%)",
+        "explanation": "Opportunities created / SQLs. Measures sales qualification rigor. Benchmark: 40-60%."
+      },
+      "win_rate": {
+        "text": "Overall Win Rate (%)",
+        "explanation": "Closed-won / (Closed-won + Closed-lost). Exclude 'no decision.' Track by segment, rep, product. > 30% is strong for complex B2B."
+      },
+      "average_deal_size": {
+        "text": "Average Deal Size",
+        "explanation": "Mean revenue per closed deal (ARR for SaaS, total contract for projects). Track trend and distribution (median vs. mean)."
+      },
+      "sales_cycle_length": {
+        "text": "Average Sales Cycle Length",
+        "explanation": "Days from SQL/opportunity creation to close. Longer cycles = higher CAC, more risk. Segment by deal size and type."
+      },
+      "customer_acquisition_cost": {
+        "text": "Customer Acquisition Cost (CAC)",
+        "explanation": "Total sales + marketing spend / new customers acquired. Include all costs: people, programs, tech, overhead. Track by channel/segment."
+      },
+      "customer_lifetime_value": {
+        "text": "Customer Lifetime Value (LTV)",
+        "explanation": "Average revenue per customer × gross margin × average customer lifespan. For SaaS: ARPU × margin / churn rate."
+      },
+      "ltv_cac_ratio": {
+        "text": "LTV:CAC Ratio",
+        "explanation": "LTV / CAC. > 3x = healthy. < 3x = payback too long. > 5x = under-investing in growth. Track payback period too."
+      },
+      "churn_rate": {
+        "text": "Annual Churn Rate (%)",
+        "explanation": "% of customers/revenue lost per year. Logo churn vs. revenue churn (net negative churn = expansion > contraction). SaaS target: < 5-7%."
+      },
+      "net_revenue_retention": {
+        "text": "Net Revenue Retention (%)",
+        "explanation": "(Starting MRR + Expansion - Contraction - Churn) / Starting MRR. > 100% = growth from existing base. Best-in-class > 120%."
+      },
+      "crm_system": {
+        "text": "CRM System in Use",
+        "explanation": "Primary CRM. Adoption rate and data quality matter more than tool. Integrate with marketing automation and ERP.",
+        "options": [
+          "Salesforce",
+          "HubSpot",
+          "Microsoft Dynamics",
+          "Pipedrive",
+          "Zoho",
+          "Custom/ERP",
+          "None/Spreadsheets"
+        ]
+      },
+      "marketing_automation": {
+        "text": "Marketing Automation Platform",
+        "explanation": "Platform for email, nurture, scoring, attribution. Enables scale. Integration with CRM is critical for closed-loop reporting.",
+        "options": [
+          "HubSpot",
+          "Marketo",
+          "Pardot",
+          "ActiveCampaign",
+          "Mailchimp",
+          "Custom",
+          "None"
+        ]
+      },
+      "sales_process_maturity": {
+        "text": "Sales Process Maturity",
+        "explanation": "Optimized = continuous improvement via data. Defined & Measured = stages, gates, metrics. Ad-hoc = hero-dependent, not scalable.",
+        "options": [
+          "Optimized (Data-driven)",
+          "Defined & Measured",
+          "Defined but not Measured",
+          "Ad-hoc",
+          "Chaotic"
+        ]
+      },
+      "pricing_strategy": {
+        "text": "Pricing Strategy",
+        "explanation": "Value-based = price to customer ROI (best margins). Cost-plus = commodity trap. Dynamic = demand-based. Tiered = capture segments.",
+        "options": [
+          "Value-based",
+          "Cost-plus",
+          "Competitive",
+          "Penetration",
+          "Skimming",
+          "Dynamic",
+          "Subscription/Tiered"
+        ]
+      },
+      "competitive_intelligence": {
+        "text": "Competitive Intelligence Process",
+        "explanation": "Formal = dedicated resources, tools, regular briefings. Enables proactive positioning and win/loss analysis.",
+        "options": [
+          "Formal/Continuous",
+          "Periodic",
+          "Ad-hoc",
+          "Reactive",
+          "None"
+        ]
+      },
+      "customer_feedback_loop": {
+        "text": "Customer Feedback Collection & Action",
+        "explanation": "Systematic = NPS/CSAT + root cause analysis + closed-loop follow-up + product/process improvements. Measure action rate.",
+        "options": [
+          "Systematic (NPS, CSAT, Action)",
+          "Regular Surveys",
+          "Occasional",
+          "Reactive Only",
+          "None"
+        ]
+      },
+      "nps_score": {
+        "text": "Current Net Promoter Score (NPS)",
+        "explanation": "% Promoters (9-10) - % Detractors (0-6). B2B benchmark: 30-50 (good), 50+ (excellent). Track by segment and account tier."
+      },
+      "sales_marketing_alignment": {
+        "text": "Sales & Marketing Alignment Level",
+        "explanation": "SLA = shared definitions, revenue targets, lead handoff process, joint planning. Misalignment wastes 10%+ of revenue.",
+        "options": [
+          "Fully Aligned (SLA)",
+          "Good Collaboration",
+          "Some Alignment",
+          "Misaligned",
+          "Siloed"
+        ]
+      },
+      "top_sales_challenges": {
+        "text": "Top Sales Challenges",
+        "explanation": "Select top 3-5 sales challenges by priority.",
+        "options": [
+          "Insufficient Qualified Pipeline",
+          "Long Sales Cycles",
+          "Price Pressure",
+          "Competitive Displacement",
+          "Rep Ramp Time/Onboarding",
+          "Low Win Rate",
+          "Forecast Accuracy",
+          "Territory/Account Coverage",
+          "Sales-Marketing Misalignment",
+          "Tool/Process Adoption",
+          "Other"
+        ]
+      },
+      "top_marketing_challenges": {
+        "text": "Top Marketing Challenges",
+        "explanation": "Select top 3-5 marketing challenges by priority.",
+        "options": [
+          "Lead Quality vs. Volume",
+          "Attribution/ROI Measurement",
+          "Content Production Bandwidth",
+          "Tech Stack Integration",
+          "Brand Differentiation",
+          "Budget Constraints",
+          "Talent/Skills Gaps",
+          "Data Quality/Management",
+          "Market Saturation",
+          "Changing Buyer Behavior",
+          "Other"
+        ]
+      }
+    },
+    "rd_innovation": {
+      "rd_budget_pct": {
+        "text": "R&D Budget as % of Revenue",
+        "explanation": "Total R&D spend (people, facilities, tools, external) / revenue. Industry benchmarks: Pharma 15-25%, Tech 10-20%, Industrial 3-8%, Consumer 2-5%."
+      },
+      "rd_team_size": {
+        "text": "R&D Team Size (FTEs)",
+        "explanation": "Total R&D headcount (researchers, engineers, technicians, PMs). Ratio to revenue indicates intensity. Track seniority mix (PhD, MS, BS)."
+      },
+      "rd_structure": {
+        "text": "R&D Organizational Structure",
+        "explanation": "Centralized = core labs. Decentralized = embedded in BUs. Matrix = dual reporting. Virtual = network of partners. Outsourced = contract R&D.",
+        "options": [
+          "Centralized",
+          "Decentralized/Business Unit",
+          "Matrix",
+          "Virtual/Open Innovation",
+          "Outsourced"
+        ]
+      },
+      "innovation_strategy": {
+        "text": "Formal Innovation Strategy Documented?",
+        "explanation": "Comprehensive = portfolio strategy, focus areas, governance, metrics, funding model, culture initiatives. Basic = focus areas only.",
+        "options": [
+          "Yes, Comprehensive",
+          "Yes, Basic",
+          "In Development",
+          "No"
+        ]
+      },
+      "innovation_horizons": {
+        "text": "Innovation Portfolio Balance (H1/H2/H3 %)",
+        "explanation": "H1 = core improvements, H2 = adjacent opportunities, H3 = transformational. Adjust for industry lifecycle.",
+        "options": [
+          "70/20/10 (Classic)",
+          "60/30/10 (Balanced)",
+          "50/30/20 (Growth-oriented)",
+          "80/15/5 (Core-focused)",
+          "Other/Not Balanced"
+        ]
+      },
+      "new_product_development_process": {
+        "text": "NPD Process Maturity",
+        "explanation": "Optimized = gates with kill criteria, portfolio mgmt, metrics. Standard = defined phases. Agile = sprints, MVPs. Hybrid = stage-gate + agile.",
+        "options": [
+          "Stage-Gate (Optimized)",
+          "Stage-Gate (Standard)",
+          "Agile/Lean Startup",
+          "Hybrid",
+          "Ad-hoc",
+          "None Formal"
+        ]
+      },
+      "products_launched_yearly": {
+        "text": "New Products Launched per Year",
+        "explanation": "Count of commercially launched products (not variants). Includes new platforms, line extensions, geographic expansions."
+      },
+      "new_product_success_rate": {
+        "text": "New Product Success Rate (%)",
+        "explanation": "% of launched products meeting revenue/margin targets at 12-24 months. Industry avg: 20-40%. Best-in-class > 60%."
+      },
+      "revenue_from_new_products": {
+        "text": "Revenue from Products <3 Years Old (%)",
+        "explanation": "Vitality index. > 30% = healthy pipeline. < 10% = innovation stagnation. Track by business unit."
+      },
+      "patents_filed_yearly": {
+        "text": "Patents Filed per Year",
+        "explanation": "Provisional + non-provisional applications. Quality > quantity. Track grant rate and citation impact."
+      },
+      "patents_granted_total": {
+        "text": "Total Active Patents",
+        "explanation": "Active granted patents in force. Indicates IP portfolio strength, freedom to operate, and licensing potential."
+      },
+      "rd_collaboration": {
+        "text": "External R&D Collaboration Types",
+        "explanation": "Select active partnerships (joint projects, funded research, IP licensing). Diversity of partners reduces risk and expands knowledge.",
+        "options": [
+          "Universities",
+          "Research Institutes",
+          "Startups",
+          "Competitors",
+          "Suppliers",
+          "Customers",
+          "Government Labs",
+          "None"
+        ]
+      },
+      "open_innovation": {
+        "text": "Open Innovation Practices",
+        "explanation": "Extensive = systematic scouting, corporate VC, innovation challenges, co-creation. None = strictly internal R&D.",
+        "options": [
+          "Extensive",
+          "Moderate",
+          "Limited",
+          "Exploring",
+          "None"
+        ]
+      },
+      "technology_scanning": {
+        "text": "Technology Scanning / Horizon Scanning",
+        "explanation": "Systematic = dedicated team, tools (patent analytics, startup databases), regular reports to leadership. Ad-hoc = reactive to threats.",
+        "options": [
+          "Systematic/Continuous",
+          "Periodic",
+          "Ad-hoc",
+          "None"
+        ]
+      },
+      "innovation_culture_score": {
+        "text": "Innovation Culture Self-Assessment (1-10)",
+        "explanation": "Assess: psychological safety, tolerance for failure, time for exploration, cross-functional collaboration, leadership role-modeling, reward systems."
+      },
+      "idea_management": {
+        "text": "Employee Idea Management System",
+        "explanation": "Active platform = high submission rate, transparent evaluation, fast implementation, recognition. Low usage = platform exists but ignored.",
+        "options": [
+          "Digital Platform (Active)",
+          "Digital Platform (Low Usage)",
+          "Suggestion Box",
+          "Hackathons/Events",
+          "Informal",
+          "None"
+        ]
+      },
+      "r_digital_tools": {
+        "text": "Digital Tools for R&D",
+        "explanation": "PLM = product lifecycle management. CAE = computer-aided engineering. ELN = digital lab records. AI/ML for materials discovery, simulation.",
+        "options": [
+          "PLM",
+          "Simulation/CAE",
+          "Electronic Lab Notebook",
+          "Requirements Management",
+          "Project Portfolio Management",
+          "Data Analytics/AI",
+          "Collaboration Platform",
+          "None"
+        ]
+      },
+      "time_to_market": {
+        "text": "Average Time-to-Market for New Products",
+        "explanation": "Concept to first revenue. Shorter = competitive advantage, higher NPV. Segment by complexity (platform vs. derivative)."
+      },
+      "rd_productivity_metrics": {
+        "text": "R&D Productivity Metrics Tracked",
+        "explanation": "Track input (spend), process (utilization, cycle time), output (patents, launches), outcome (revenue, margin) metrics.",
+        "options": [
+          "R&D Spend/Revenue",
+          "Patents per $M R&D",
+          "New Product Revenue %",
+          "Time to Market",
+          "Project Success Rate",
+          "Resource Utilization",
+          "None"
+        ]
+      },
+      "technical_debt": {
+        "text": "Technical Debt in Product Portfolio",
+        "explanation": "Legacy architectures, outdated tech stacks, deferred refactoring, missing documentation. Critical = blocks new features, security risk.",
+        "options": [
+          "Minimal",
+          "Manageable",
+          "Significant",
+          "Critical",
+          "Unknown"
+        ]
+      },
+      "sustainability_innovation": {
+        "text": "Sustainability-Driven Innovation Focus",
+        "explanation": "Core = sustainability is primary innovation driver (circular, bio-based, energy transition). Exploring = pilots only.",
+        "options": [
+          "Core Strategy",
+          "Important Initiative",
+          "Exploring",
+          "Not a Priority"
+        ]
+      },
+      "top_innovation_challenges": {
+        "text": "Top Innovation Challenges",
+        "explanation": "Select top 3-5 innovation challenges by priority.",
+        "options": [
+          "Long Development Cycles",
+          "Portfolio Misaligned to Strategy",
+          "Insufficient External Partnerships",
+          "Risk-Averse Culture",
+          "Technical Debt Slowing Innovation",
+          "Inadequate Funding",
+          "Talent Gaps",
+          "Poor Idea-to-Market Process",
+          "Lack of Customer Insight",
+          "Siloed R&D",
+          "Other"
+        ]
+      },
+      "innovation_priorities": {
+        "text": "Innovation Priority Areas (Next 12-24 Months)",
+        "explanation": "Select top 3-5 funded innovation priorities.",
+        "options": [
+          "Launch AI-Enabled Products",
+          "Establish Corporate VC Fund",
+          "Reduce Time-to-Market via Digital Twin",
+          "Build Sustainability Innovation Pipeline",
+          "Strengthen Open Innovation/Partnerships",
+          "Improve NPD Process",
+          "Develop Platform/Modular Architecture",
+          "Invest in Advanced Materials/Biotech",
+          "Enhance Innovation Culture",
+          "Reduce Technical Debt",
+          "Other"
+        ]
+      }
+    },
+    "productivity": {
+      "labor_productivity_trend": {
+        "text": "Labor Productivity Trend (Last 3 Years)",
+        "explanation": "Output per labor hour trend. >5%/yr = strong (automation, lean, tech). Flat/declining = investigate causes (mix, utilization, skill gaps).",
+        "options": [
+          "Improving >5%/yr",
+          "Improving 1-5%/yr",
+          "Flat",
+          "Declining 1-5%/yr",
+          "Declining >5%/yr"
+        ]
+      },
+      "revenue_per_employee": {
+        "text": "Revenue per Employee (Annual)",
+        "explanation": "Revenue / total FTEs. Benchmarks: SaaS $300-500K, Manufacturing $200-400K, Services $150-300K. Track trend, not just absolute."
+      },
+      "value_added_per_employee": {
+        "text": "Value Added per Employee",
+        "explanation": "(Revenue - Material/Service Costs) / FTEs. Better than revenue/FTE as it removes pass-through costs. Measures true economic contribution."
+      },
+      "overtime_percentage": {
+        "text": "Overtime as % of Total Hours",
+        "explanation": "Overtime hours / total hours. > 5-10% indicates capacity constraint, poor planning, or staffing gaps. Chronic OT = burnout, quality, safety risks."
+      },
+      "absenteeism_rate": {
+        "text": "Absenteeism Rate (%)",
+        "explanation": "Unscheduled absence hours / scheduled hours. > 3-4% is high. Track by department, shift, season. Root cause: health, engagement, management."
+      },
+      "employee_utilization": {
+        "text": "Direct vs Indirect Labor Ratio",
+        "explanation": "Direct = value-adding (production, service delivery). Indirect = support (maintenance, quality, supervision, admin). Target: maximize direct %."
+      },
+      "automation_level": {
+        "text": "Automation Level in Key Processes",
+        "explanation": "Lights-out = no human intervention. Highly = robots/CNC with operators. Partial = key steps automated. Assess by process, not whole factory.",
+        "options": [
+          "Lights-out/Fully Automated",
+          "Highly Automated",
+          "Partially Automated",
+          "Manual with Tools",
+          "Fully Manual"
+        ]
+      },
+      "process_standardization": {
+        "text": "Process Standardization Level",
+        "explanation": "Standard work documented, visual, trained, audited. Enables quality, productivity, training, and continuous improvement baseline.",
+        "options": [
+          "Fully Standardized",
+          "Mostly Standardized",
+          "Partially Standardized",
+          "Minimal",
+          "No Standards"
+        ]
+      },
+      "continuous_improvement": {
+        "text": "Continuous Improvement Program",
+        "explanation": "Embedded = every employee improves daily (Kaizen). Active = structured program, dedicated resources. Pilot = limited scope. Ad-hoc = reactive.",
+        "options": [
+          "Embedded Culture",
+          "Active Program",
+          "Pilot Projects",
+          "Ad-hoc",
+          "None"
+        ]
+      },
+      "improvement_ideas_per_employee": {
+        "text": "Improvement Ideas Submitted per Employee/Year",
+        "explanation": "Total ideas / total employees. World-class: >10-20/employee/year (Toyota ~30). Low = culture or process barrier."
+      },
+      "improvement_implementation_rate": {
+        "text": "Improvement Ideas Implemented (%)",
+        "explanation": "Implemented / submitted. High rate = effective evaluation, fast approval, recognition. Low rate = bottleneck, poor ideas, or lack of resources."
+      },
+      "productivity_measurement": {
+        "text": "Productivity Measurement Systems",
+        "explanation": "Engineered standards = predetermined times (MOST, MTM). Real-time = IoT/wearables. Manual = stopwatch/spreadsheet. Not Measured = flying blind.",
+        "options": [
+          "Labor Standards/Engineered",
+          "Time Studies",
+          "MOST/MTM",
+          "Real-time Tracking",
+          "ERP/MES Reports",
+          "Manual Tracking",
+          "Not Measured"
+        ]
+      },
+      "bottleneck_analysis": {
+        "text": "Regular Bottleneck Analysis Conducted?",
+        "explanation": "Theory of Constraints: identify constraint, exploit, subordinate, elevate, repeat. Weekly = responsive. Quarterly+ = slow improvement.",
+        "options": [
+          "Weekly",
+          "Monthly",
+          "Quarterly",
+          "Annually",
+          "Rarely/Never"
+        ]
+      },
+      "workforce_skills_matrix": {
+        "text": "Workforce Skills Matrix Maintained?",
+        "explanation": "Matrix mapping employees vs. required skills/certifications. Enables cross-training, succession planning, gap identification, flexible scheduling.",
+        "options": [
+          "Current & Comprehensive",
+          "Current but Partial",
+          "Outdated",
+          "In Development",
+          "None"
+        ]
+      },
+      "training_hours_per_employee": {
+        "text": "Annual Training Hours per Employee",
+        "explanation": "Total training hours / FTEs. Best-in-class: 40-80+ hours. Include technical, safety, lean, leadership, digital skills. Track completion rate."
+      },
+      "cross_training_level": {
+        "text": "Cross-training / Multi-skilling Level",
+        "explanation": "% of workforce certified on multiple operations. Extensive = flexible scheduling, absentee coverage, career paths, engagement.",
+        "options": [
+          "Extensive",
+          "Good",
+          "Moderate",
+          "Limited",
+          "None"
+        ]
+      },
+      "ergonomics_safety": {
+        "text": "Ergonomics & Safety Program Maturity",
+        "explanation": "World Class = proactive ergonomics, zero injuries, employee-driven. Compliant = meets regulations only. Ergonomics improves productivity + retention.",
+        "options": [
+          "World Class",
+          "Strong",
+          "Compliant",
+          "Basic",
+          "Minimal"
+        ]
+      },
+      "productivity_gaps": {
+        "text": "Biggest Productivity Gap Types",
+        "explanation": "Select top priority productivity gaps.",
+        "options": [
+          "High Changeover/Setup Times",
+          "Excessive WIP Between Cells",
+          "Skill Gaps in Key Roles",
+          "Manual Data Entry/Reporting",
+          "Frequent Micro-stops",
+          "Poor Layout/Flow",
+          "Inadequate Maintenance",
+          "Quality Issues/Rework",
+          "Scheduling/Planning Gaps",
+          "Lack of Standard Work",
+          "Other"
+        ]
+      },
+      "productivity_initiatives": {
+        "text": "Current Productivity Improvement Focus",
+        "explanation": "Select active productivity improvement initiatives.",
+        "options": [
+          "Cell/Line Redesign",
+          "Real-time OEE/Performance Tracking",
+          "Cross-training Program",
+          "Automation/Robotics",
+          "Lean/CI Program Enhancement",
+          "Digital Work Instructions",
+          "Predictive Maintenance",
+          "Changeover Reduction (SMED)",
+          "Workforce Upskilling",
+          "Ergonomics Improvements",
+          "Other"
+        ]
+      }
+    },
+    "waste_management": {
+      "environmental_certifications": {
+        "text": "Environmental Certifications Held",
+        "explanation": "ISO 14001 = EMS. EMAS = EU enhanced. ISO 50001 = energy mgmt. LEED = buildings. B Corp = holistic. SBTi = validated targets.",
+        "options": [
+          "ISO 14001",
+          "EMAS",
+          "ISO 50001",
+          "LEED",
+          "B Corp",
+          "Carbon Neutral",
+          "Science Based Targets",
+          "None"
+        ]
+      },
+      "waste_tracking_system": {
+        "text": "Waste Tracking & Reporting System",
+        "explanation": "Real-time = IoT sensors, auto-reporting. ERP = transactional data. Manual = monthly weighbridge tickets. None = unknown waste streams.",
+        "options": [
+          "Real-time Digital",
+          "ERP Integrated",
+          "Periodic Manual",
+          "Basic Spreadsheet",
+          "None"
+        ]
+      },
+      "total_waste_generated": {
+        "text": "Total Waste Generated (Tons/Year)",
+        "explanation": "All waste streams: hazardous, non-hazardous, universal, construction. Track by category, process, facility. Baseline for reduction targets."
+      },
+      "hazardous_waste_pct": {
+        "text": "Hazardous Waste as % of Total",
+        "explanation": "Regulated waste requiring special handling/disposal. High % = regulatory risk, cost, liability. Target: reduce via substitution, process change."
+      },
+      "waste_diversion_rate": {
+        "text": "Waste Diversion from Landfill (%)",
+        "explanation": "(Recycled + Composted + Reused + Energy Recovery) / Total Waste. Zero Waste to Landfill = >90-95%. Exclude hazardous if no alt."
+      },
+      "recycling_rate": {
+        "text": "Recycling Rate (%)",
+        "explanation": "Materials recycled / total waste generated. Track by material (metal, plastic, paper, organic). Quality of recycle stream matters (downcycling)."
+      },
+      "circular_economy_initiatives": {
+        "text": "Circular Economy Initiatives",
+        "explanation": "Select active programs. Design for recycling = mono-materials, easy disassembly. Industrial symbiosis = waste = neighbor's input.",
+        "options": [
+          "Product Design for Recycling",
+          "Remanufacturing/Refurbishment",
+          "Take-back Programs",
+          "Industrial Symbiosis",
+          "Material Substitution",
+          "Packaging Reduction",
+          "None"
+        ]
+      },
+      "water_consumption": {
+        "text": "Annual Water Consumption (m³)",
+        "explanation": "Total withdrawal from all sources (municipal, groundwater, surface). Track by process. Water-stressed regions need intensity metrics (m³/unit)."
+      },
+      "water_recycling_rate": {
+        "text": "Water Recycling/Reuse Rate (%)",
+        "explanation": "Recycled/reused water / total withdrawal. Includes cooling tower blowdown recovery, RO permeate reuse, rainwater harvesting."
+      },
+      "energy_consumption": {
+        "text": "Annual Energy Consumption (MWh)",
+        "explanation": "Electricity + fuels (natural gas, diesel, steam) converted to MWh. Track by facility, process. Baseline for intensity (MWh/unit) and reduction."
+      },
+      "renewable_energy_pct": {
+        "text": "Renewable Energy % of Total",
+        "explanation": "On-site solar/wind + purchased RECs/PPAs + green tariff / total consumption. Distinguish additionality (new capacity) vs. certificates."
+      },
+      "carbon_footprint_scope12": {
+        "text": "Scope 1 & 2 CO2e Emissions (Tons/Year)",
+        "explanation": "Scope 1 = direct combustion, process emissions, fugitive. Scope 2 = purchased electricity/heat/steam (location + market-based)."
+      },
+      "carbon_footprint_scope3": {
+        "text": "Scope 3 CO2e Emissions Measured?",
+        "explanation": "Scope 3 = value chain (purchased goods, transport, use of product, end-of-life). Often 70-90% of total. Start with top categories.",
+        "options": [
+          "Full Measurement",
+          "Partial",
+          "Planning",
+          "Not Measured"
+        ]
+      },
+      "carbon_reduction_target": {
+        "text": "Carbon Reduction Target Status",
+        "explanation": "Absolute or intensity target. Align with SBTi (1.5°C = 4.2%/yr linear). Include Scope 3 if >40% of total. Net Zero = 90-95% reduction + removals.",
+        "options": [
+          "SBTi-Validated Net Zero Target",
+          "SBTi-Validated Near-term Target",
+          "Public Commitment (Not SBTi)",
+          "Internal Target Only",
+          "No Target"
+        ]
+      },
+      "lean_green_integration": {
+        "text": "Lean & Green Integration Level",
+        "explanation": "Integrated = waste elimination = environmental reduction (e.g., SMED reduces energy, defects = scrap). Aligned = shared goals, separate teams.",
+        "options": [
+          "Fully Integrated",
+          "Aligned Initiatives",
+          "Separate Programs",
+          "Lean Only",
+          "Green Only",
+          "Neither"
+        ]
+      },
+      "material_efficiency": {
+        "text": "Material Efficiency (Output/Input Ratio)",
+        "explanation": "Product output weight / raw material input weight. Higher = less waste. Track by product line. Theoretical max = 1.0 (no waste)."
+      },
+      "packaging_waste_reduction": {
+        "text": "Packaging Waste Reduction Focus",
+        "explanation": "Select active packaging reduction initiatives.",
+        "options": [
+          "Lightweighting",
+          "Reusable Containers",
+          "Recycled Content",
+          "Elimination/Right-sizing",
+          "Mono-materials",
+          "Take-back Systems",
+          "Supplier Packaging Requirements",
+          "None"
+        ]
+      },
+      "supplier_environmental_requirements": {
+        "text": "Environmental Requirements for Suppliers",
+        "explanation": "Mandatory = ISO 14001 required for key suppliers. Scoring = ESG scorecards. Code = signed commitment. Audit high-risk suppliers.",
+        "options": [
+          "Mandatory Certifications",
+          "Scoring/Assessment",
+          "Code of Conduct",
+          "Basic Compliance",
+          "None"
+        ]
+      },
+      "waste_cost_savings": {
+        "text": "Annual Cost Savings from Waste Reduction",
+        "explanation": "Avoided disposal fees + material savings + revenue from by-products + energy savings. Quantify to build business case for sustainability."
+      },
+      "environmental_incidents": {
+        "text": "Environmental Incidents (Last 3 Years)",
+        "explanation": "Spills, exceedances, notices of violation, fines, community complaints. Track severity, root cause, corrective action closure."
+      },
+      "sustainability_reporting": {
+        "text": "Sustainability/ESG Reporting",
+        "explanation": "GRI = comprehensive. SASB = industry-specific financial materiality. TCFD = climate risk. CSRD (EU) mandates for many non-EU cos.",
+        "options": [
+          "GRI/SASB/TCFD Compliant",
+          "Voluntary Report",
+          "Internal Only",
+          "Regulatory Only",
+          "None"
+        ]
+      },
+      "top_waste_challenges": {
+        "text": "Top Waste Management Challenges",
+        "explanation": "Select top 3-5 waste management challenges by priority.",
+        "options": [
+          "Hazardous Waste Disposal Cost",
+          "Lack of Recycling Infrastructure",
+          "Scope 3 Data from Suppliers",
+          "Regulatory Complexity Across Regions",
+          "Waste Tracking/Data Quality",
+          "Employee Engagement",
+          "Cost of Circular Solutions",
+          "Technology Limitations",
+          "Customer Requirements",
+          "Other"
+        ]
+      },
+      "sustainability_priorities": {
+        "text": "Top Sustainability Priorities",
+        "explanation": "Select top 3-5 funded sustainability priorities.",
+        "options": [
+          "Achieve Zero Waste to Landfill",
+          "Renewable Energy Installation",
+          "Supplier Decarbonization Program",
+          "Publish TCFD/CSRD Report",
+          "Water Stewardship/Reduction",
+          "Circular Product Design",
+          "Carbon Neutrality/Net Zero",
+          "Biodiversity/Nature Positive",
+          "Sustainable Packaging",
+          "Green Product Innovation",
+          "Other"
+        ]
+      }
+    },
+    "bcg": {
+      "bioeconomy_strategy": {
+        "text": "Formal Bioeconomy Strategy",
+        "explanation": "Comprehensive = targets, investment plan, governance, partnerships. Bioeconomy = renewable biological resources for food, materials, energy.",
+        "options": [
+          "Yes, Comprehensive",
+          "Yes, Basic",
+          "In Development",
+          "No"
+        ]
+      },
+      "bio_based_materials_pct": {
+        "text": "% of Raw Materials from Bio-based Sources",
+        "explanation": "Weight or cost % of inputs from biomass (agricultural, forestry, marine, waste). Excludes fossil-based. Track by material category."
+      },
+      "bio_products_revenue": {
+        "text": "% Revenue from Bio-based Products",
+        "explanation": "Revenue from products with >25% bio-based content (per EN 16785). Includes intermediates, chemicals, materials, consumer goods."
+      },
+      "bio_rnd_investment": {
+        "text": "R&D Investment in Bio-innovation (% of R&D Budget)",
+        "explanation": "Portion of R&D spend on bio-based materials, bioprocesses, synthetic biology, enzymatic routes, fermentation scale-up."
+      },
+      "bio_partnerships": {
+        "text": "Bioeconomy Partnership Types",
+        "explanation": "Select active collaborations: joint research, talent pipeline, pilot facilities, cluster memberships (e.g., Bio-based Industries Consortium).",
+        "options": [
+          "Universities",
+          "Research Institutes",
+          "Industry Clusters",
+          "Startups",
+          "Government Agencies",
+          "Suppliers",
+          "Customers",
+          "None"
+        ]
+      },
+      "bio_certifications": {
+        "text": "Bio-based Content Certifications Held",
+        "explanation": "USDA BioPreferred = US federal procurement. OK biobased = EU (Vinçotte). ISCC PLUS = mass balance, circular. RSB = sustainability.",
+        "options": [
+          "USDA BioPreferred",
+          "OK biobased",
+          "ISCC PLUS",
+          "REDcert²",
+          "RSB",
+          "Bonsucro",
+          "Other"
+        ]
+      },
+      "biotech_adoption": {
+        "text": "Biotechnology Adoption Level in Processes",
+        "explanation": "Advanced = precision fermentation, enzyme engineering, metabolic pathway design, cell-free systems. Basic = buying bio-based feedstocks only.",
+        "options": [
+          "Advanced (Fermentation, Enzymatic, Synthetic Bio)",
+          "Moderate (Some Bioprocesses)",
+          "Basic (Bio-based Inputs Only)",
+          "None"
+        ]
+      },
+      "bio_supply_chain": {
+        "text": "Bio-based Supply Chain Maturity",
+        "explanation": "Traceability to farm/plantation level. Certifications (RSPO, RTRS, FSC). Risk: land use change, biodiversity, social. Digital traceability (blockchain).",
+        "options": [
+          "Fully Integrated & Traceable",
+          "Partially Traceable",
+          "Basic Sourcing",
+          "Not Developed"
+        ]
+      },
+      "circular_strategy": {
+        "text": "Formal Circular Economy Strategy",
+        "explanation": "Comprehensive = circular design, business models, reverse logistics, metrics, targets. Ellen MacArthur framework: eliminate, circulate, regenerate.",
+        "options": [
+          "Yes, Comprehensive",
+          "Yes, Basic",
+          "In Development",
+          "No"
+        ]
+      },
+      "circular_maturity": {
+        "text": "Circular Economy Maturity Level",
+        "explanation": "Regenerative = net positive (C2C certified). Circular = closed loops (recycle, remanufacture, PaaS). Recycling only = downcycling risk.",
+        "options": [
+          "Regenerative (Cradle-to-Cradle)",
+          "Circular (Closed Loops)",
+          "Recycling Focused",
+          "Waste Reduction Only",
+          "Linear (Take-Make-Waste)"
+        ]
+      },
+      "recycled_content_pct": {
+        "text": "% Recycled Content in Products/Packaging",
+        "explanation": "Post-consumer + post-industrial recycled content by weight. Track by product line. Targets: EU PPWR 30% plastic packaging by 2030."
+      },
+      "product_lifecycle_extension": {
+        "text": "Product Lifecycle Extension Programs",
+        "explanation": "PaaS = retain ownership, sell performance. Remanufacturing = as-new with warranty. Modular = upgradeable, repairable. Track revenue % from circular models.",
+        "options": [
+          "Repair Services",
+          "Refurbishment/Remanufacturing",
+          "Product-as-a-Service",
+          "Take-back/Buy-back",
+          "Upcycling",
+          "Modular Design",
+          "None"
+        ]
+      },
+      "waste_to_resource": {
+        "text": "Waste-to-Resource Initiatives",
+        "explanation": "Symbiosis = waste = neighbor's input (Kalundborg model). Valorization = high-value from by-products. Chemical recycling = monomer recovery.",
+        "options": [
+          "Industrial Symbiosis",
+          "By-product Valorization",
+          "Waste Heat Recovery",
+          "Anaerobic Digestion",
+          "Composting",
+          "Chemical Recycling",
+          "None"
+        ]
+      },
+      "circular_design_principles": {
+        "text": "Circular Design Principles Applied",
+        "explanation": "Embed in NPD process. DfD = fasteners not glue, material labeling. DfR = spare parts, manuals, diagnostic interfaces. Standardize = reduce SKUs.",
+        "options": [
+          "Design for Durability",
+          "Design for Repair",
+          "Design for Disassembly",
+          "Design for Recycling",
+          "Design for Reuse",
+          "Material Standardization",
+          "None"
+        ]
+      },
+      "packaging_circularity": {
+        "text": "Packaging Circularity",
+        "explanation": "Reusable = returnable containers. Recyclable = mono-material, no problematic additives. Compostable = certified (EN 13432). Assess full portfolio.",
+        "options": [
+          "100% Reusable/Recyclable/Compostable",
+          "Mostly Recyclable",
+          "Partially Recyclable",
+          "Single-use Dominant",
+          "Not Assessed"
+        ]
+      },
+      "circular_revenue_models": {
+        "text": "Revenue from Circular Business Models (% of Total)",
+        "explanation": "PaaS, leasing, remanufacturing sales, take-back refurbishment, recycling services. Excludes virgin product sales. Target: grow this %. "
+      },
+      "circular_kpis": {
+        "text": "Circular Economy KPIs Tracked",
+        "explanation": "MCI (Ellen MacArthur) = 0-1 score. CTI (WBCSD) = corporate level. Resource productivity = revenue / material input.",
+        "options": [
+          "Material Circularity Indicator (MCI)",
+          "Circular Transition Indicators (CTI)",
+          "Recycling Rate",
+          "Recycled Content %",
+          "Product Lifetime Extension",
+          "Resource Productivity",
+          "Waste Generation per Unit",
+          "None"
+        ]
+      },
+      "green_strategy": {
+        "text": "Formal Green Economy / Net Zero Strategy",
+        "explanation": "Net Zero (SBTi) = 90-95% reduction + permanent removals by 2050. Carbon Neutral = offsetting (transition only). Basic = incremental improvements.",
+        "options": [
+          "Yes, Net Zero committed (SBTi)",
+          "Yes, Carbon Neutral committed",
+          "Yes, Basic Sustainability",
+          "In development",
+          "No"
+        ]
+      },
+      "scope12_emissions": {
+        "text": "Scope 1 & 2 GHG Emissions (tCO2e/year)",
+        "explanation": "Scope 1 = direct (combustion, process, fugitive). Scope 2 = indirect energy (location + market-based). Report both. Third-party verification."
+      },
+      "scope3_emissions": {
+        "text": "Scope 3 GHG Emissions Tracked?",
+        "explanation": "15 categories. Start with: purchased goods (Cat 1), upstream transport (4), use of sold products (11), end-of-life (12). Often 70-90% of total.",
+        "options": [
+          "Yes, Comprehensive",
+          "Yes, Partial (Key Categories)",
+          "In Progress",
+          "No"
+        ]
+      },
+      "renewable_energy_pct": {
+        "text": "% Energy from Renewable Sources",
+        "explanation": "On-site generation + PPAs + green tariffs + RECs / total. Additionality matters: new capacity > unbundled RECs. RE100 = 100% target."
+      },
+      "energy_efficiency_improvement": {
+        "text": "Energy Efficiency Improvement (Last 3 Years %)",
+        "explanation": "(Baseline - Current) / Baseline energy intensity (MWh/unit). Cumulative. Track by facility, process. ISO 50001 drives systematic improvement."
+      },
+      "water_stewardship": {
+        "text": "Water Stewardship Program",
+        "explanation": "AWS = Alliance for Water Stewardship standard (catchment context). Comprehensive = targets, risk assessment, collective action. Compliance = permit limits only.",
+        "options": [
+          "Advanced (AWS Certified)",
+          "Comprehensive",
+          "Basic Monitoring",
+          "Compliance Only",
+          "None"
+        ]
+      },
+      "biodiversity_action": {
+        "text": "Biodiversity & Nature-positive Actions",
+        "explanation": "TNFD = Taskforce on Nature-related Financial Disclosures (like TCFD). No Net Loss = mitigate hierarchy. Deforestation-free = DCF, EUDR compliance.",
+        "options": [
+          "TNFD Reporting",
+          "No Net Loss/Net Gain Targets",
+          "Habitat Restoration",
+          "Sustainable Land Use",
+          "Supply Chain Deforestation-free",
+          "None"
+        ]
+      },
+      "green_finance": {
+        "text": "Green Finance Instruments Used",
+        "explanation": "SLL = margin ratchet on KPIs. Green bonds = use of proceeds. Carbon credits = voluntary market (avoidance/removal). Disclose integrity (ICVCM).",
+        "options": [
+          "Green Bonds",
+          "Sustainability-linked Loans",
+          "Green Loans",
+          "Carbon Credits",
+          "ESG-linked Derivatives",
+          "None"
+        ]
+      },
+      "carbon_pricing_internal": {
+        "text": "Internal Carbon Pricing Applied?",
+        "explanation": "Shadow = decision-making ($/tCO2e in CAPEX). Internal fee = business units pay central fund for emissions. Drives low-carbon investment.",
+        "options": [
+          "Yes, Shadow Price",
+          "Yes, Internal Fee",
+          "Planned",
+          "No"
+        ]
+      },
+      "climate_transition_plan": {
+        "text": "Climate Transition Plan (CTP) Published?",
+        "explanation": "CTP = governance, targets, actions, capital allocation, policy engagement, just transition. TCFD/GFANZ/ESRS aligned. Board-approved.",
+        "options": [
+          "Yes, Comprehensive",
+          "Yes, Basic",
+          "In Development",
+          "No"
+        ]
+      },
+      "bcg_governance": {
+        "text": "BCG Governance Structure",
+        "explanation": "Board committee = oversight. CSO = executive accountability. Steering = cross-BU alignment. Working groups = execution. External = credibility.",
+        "options": [
+          "Board-level Sustainability Committee",
+          "Chief Sustainability Officer",
+          "BCG Steering Committee",
+          "Cross-functional Working Groups",
+          "External Advisory Board",
+          "None Formal"
+        ]
+      },
+      "bcg_kpi_integration": {
+        "text": "BCG KPIs Integrated into Executive Compensation?",
+        "explanation": "Significant = >15-20% of variable pay. Moderate = 5-15%. Minor = <5%. Aligns incentives with long-term transformation.",
+        "options": [
+          "Yes, Significant Weight",
+          "Yes, Moderate Weight",
+          "Yes, Minor Weight",
+          "No"
+        ]
+      },
+      "bcg_digital_tools": {
+        "text": "Digital Tools for BCG Management",
+        "explanation": "LCA = life cycle assessment (cradle-to-grave). DPP = EU regulation (product data). Blockchain = supply chain transparency. AI = process optimization.",
+        "options": [
+          "LCA Software (SimaPro, GaBi, openLCA)",
+          "Material Flow Analysis",
+          "Digital Product Passport",
+          "Blockchain Traceability",
+          "AI for Resource Optimization",
+          "IoT for Energy/Resource Monitoring",
+          "None"
+        ]
+      },
+      "bcg_stakeholder_engagement": {
+        "text": "Stakeholder Engagement on BCG Topics",
+        "explanation": "Map stakeholders by influence/interest. Co-create targets with suppliers. Investor dialogue on transition risk. Community = social license.",
+        "options": [
+          "Customers",
+          "Suppliers",
+          "Investors",
+          "Employees",
+          "Local Communities",
+          "Regulators",
+          "NGOs",
+          "Academia"
+        ]
+      },
+      "bcg_training": {
+        "text": "BCG Training & Capacity Building",
+        "explanation": "Comprehensive = all levels, certified, ongoing. Role-specific = procurement (sustainable sourcing), R&D (circular design), ops (energy mgmt).",
+        "options": [
+          "Comprehensive Program",
+          "Role-specific Training",
+          "Awareness Only",
+          "Ad-hoc",
+          "None"
+        ]
+      },
+      "bcg_regulatory_readiness": {
+        "text": "Readiness for Key Regulations (EU Taxonomy, CSRD, CBAM, PPWR, etc.)",
+        "explanation": "Taxonomy = eligibility/alignment reporting. CSRD = double materiality, ESRS. CBAM = carbon border tax (iron, steel, aluminum, cement, hydrogen, electricity). PPWR = packaging waste.",
+        "options": [
+          "Fully Prepared",
+          "Well Progressed",
+          "Early Stages",
+          "Not Started",
+          "Unaware"
+        ]
+      },
+      "bcg_priorities": {
+        "text": "BCG Transformation Priority Areas (Next 12-24 Months)",
+        "explanation": "Select top 3-5 funded, owned, measurable BCG transformation priorities.",
+        "options": [
+          "Achieve CSRD/ESRS Compliance",
+          "Launch Circular Business Models",
+          "Secure SBTi Net Zero Validation",
+          "Deploy LCA for Top Products",
+          "Build Bio-based Product Portfolio",
+          "Implement Digital Product Passport",
+          "Establish Industrial Symbiosis",
+          "Green Finance/Sustainability-linked Loans",
+          "Supply Chain Decarbonization",
+          "Biodiversity/Nature Strategy",
+          "Other"
+        ]
+      }
+    },
+    "oee": {
+      "oee_tracked": {
+        "text": "Is OEE Currently Tracked?",
+        "explanation": "Real-time = IIoT/MES auto-capture. Manual = operator logs per shift. Periodic = weekly/monthly studies. Not tracked = no visibility.",
+        "options": [
+          "Yes - Real-time/Automated",
+          "Yes - Manual/Daily",
+          "Yes - Periodic Studies",
+          "No - Not Tracked"
+        ]
+      },
+      "oee_overall": {
+        "text": "Current Overall OEE (%)",
+        "explanation": "OEE = Availability × Performance × Quality. World-class = 85%+. Typical = 60-75%. Low = prioritize biggest loss component."
+      },
+      "oee_availability": {
+        "text": "Availability Component (%)",
+        "explanation": "Run Time / Planned Production Time. Losses: breakdowns, changeovers, maintenance, no operator/material. Target > 90%."
+      },
+      "oee_performance": {
+        "text": "Performance Component (%)",
+        "explanation": "(Ideal Cycle Time × Total Count) / Run Time. Losses: micro-stops, reduced speed. Target > 95%."
+      },
+      "oee_quality": {
+        "text": "Quality Component (%)",
+        "explanation": "Good Count / Total Count. Losses: startup scrap, production scrap, rework. Target > 99.9% (Six Sigma)."
+      },
+      "oee_target": {
+        "text": "OEE Target (%)",
+        "explanation": "Annual improvement target. Typical: +3-5%/yr. Set by component (e.g., Availability 90% → 93%, Quality 99.5% → 99.8%)."
+      },
+      "oee_world_class": {
+        "text": "World-Class OEE Benchmark for Your Industry (%)",
+        "explanation": "Industry-specific: Discrete 85%, Process 90%, Pharma 80%, Automotive 85%. Know your benchmark to set realistic targets."
+      },
+      "equipment_covered": {
+        "text": "% of Critical Equipment Covered by OEE",
+        "explanation": "Critical = bottleneck, high-value, quality-critical. 100% = all constraints monitored. Start with constraint (Theory of Constraints)."
+      },
+      "oee_data_collection": {
+        "text": "OEE Data Collection Method",
+        "explanation": "Automated = PLC signals (run/stop, count, reject) → MES. Semi = auto counts + manual reason codes. Manual = error-prone, delayed.",
+        "options": [
+          "Automated (IIoT/MES)",
+          "Semi-automated (PLC + Manual)",
+          "Manual (Paper/Excel)",
+          "Operator Log Sheets",
+          "Not Collected"
+        ]
+      },
+      "oee_frequency": {
+        "text": "OEE Calculation Frequency",
+        "explanation": "Real-time = immediate response. Per shift = handoff review. Daily = management review. Monthly = too slow for improvement.",
+        "options": [
+          "Real-time",
+          "Per Shift",
+          "Daily",
+          "Weekly",
+          "Monthly",
+          "Ad-hoc"
+        ]
+      },
+      "six_big_losses_tracked": {
+        "text": "Six Big Losses Categorized & Tracked?",
+        "explanation": "6 Losses: 1) Breakdowns, 2) Setup/Adjust, 3) Idling/Minor Stops, 4) Reduced Speed, 5) Startup Defects, 6) Production Defects. Categorize to prioritize.",
+        "options": [
+          "All 6 Tracked",
+          "4-5 Tracked",
+          "2-3 Tracked",
+          "Only Overall",
+          "Not Categorized"
+        ]
+      },
+      "availability_losses": {
+        "text": "Top Availability Losses (Check All)",
+        "explanation": "Breakdowns = PdM target. Changeovers = SMED target. Maintenance = PM optimization. No operator = scheduling/staffing.",
+        "options": [
+          "Unplanned Downtime/Breakdowns",
+          "Planned Downtime (Changeovers)",
+          "Planned Downtime (Maintenance)",
+          "Setup/Adjustment",
+          "No Operator/Material",
+          "Other"
+        ]
+      },
+      "performance_losses": {
+        "text": "Top Performance Losses (Check All)",
+        "explanation": "Micro-stops (<5 min) often hidden, major cumulative loss. Reduced speed = running below ideal rate. Startup = ramp losses.",
+        "options": [
+          "Micro Stops/Idling",
+          "Reduced Speed",
+          "Minor Stops",
+          "Start-up Losses",
+          "Changeover Overruns",
+          "Other"
+        ]
+      },
+      "quality_losses": {
+        "text": "Top Quality Losses (Check All)",
+        "explanation": "Startup scrap = process stabilization. Production scrap = steady-state variation. Rework = hidden cost. Track by defect type (Pareto).",
+        "options": [
+          "Start-up Scrap",
+          "Production Scrap",
+          "Rework",
+          "In-process Defects",
+          "Customer Returns",
+          "Other"
+        ]
+      },
+      "tpm_program": {
+        "text": "Total Productive Maintenance (TPM) Program",
+        "explanation": "8 Pillars: 1) Autonomous Maint, 2) Planned Maint, 3) Focused Improvement, 4) Quality Maint, 5) Early Mgmt, 6) Training, 7) Admin, 8) Safety/Env. Assess maturity.",
+        "options": [
+          "Full TPM (All 8 Pillars)",
+          "Partial TPM (3-5 Pillars)",
+          "Focused Improvement Only",
+          "Autonomous Maintenance Only",
+          "Planned Maintenance Only",
+          "No TPM"
+        ]
+      },
+      "oee_initiatives": {
+        "text": "Current OEE Improvement Focus",
+        "explanation": "Select active OEE improvement initiatives with expected impact.",
+        "options": [
+          "SMED/Changeover Reduction",
+          "Predictive Maintenance (PdM)",
+          "Micro-stop Reduction",
+          "Speed Loss Reduction",
+          "Startup Scrap Reduction",
+          "Quality Defect Reduction",
+          "Operator Training/Autonomous Maintenance",
+          "Real-time OEE Visualization",
+          "Root Cause Analysis/Problem Solving",
+          "TPM Implementation",
+          "Other"
+        ]
+      },
+      "oee_challenges": {
+        "text": "Biggest OEE Improvement Challenges",
+        "explanation": "Select top challenges hindering OEE improvement.",
+        "options": [
+          "Legacy Equipment Without Sensors",
+          "Operator Resistance to Data Entry",
+          "No Standard Reason Codes",
+          "Competing Priorities/Resources",
+          "Lack of Management Commitment",
+          "Data Quality/Issues",
+          "Skill Gaps in Analysis",
+          "Siloed Maintenance/Operations",
+          "Budget Constraints",
+          "Complexity of Implementation",
+          "Other"
+        ]
+      }
+    }
+  }
+}

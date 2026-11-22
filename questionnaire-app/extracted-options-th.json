@@ -1,0 +1,820 @@
+{
+  "questions.company_profile.industry.options": [
+    "อุตสาหกรรมผลิต",
+    "เทคโนโลยี",
+    "สาธารณสุข",
+    "บริการทางการเงิน",
+    "รายได้",
+    "อาหารและเครื่องดื่ม",
+    "ยานยนต์",
+    "เคมี",
+    "สิ่งทอ",
+    "อื่นๆ"
+  ],
+  "questions.company_profile.company_size.options": [
+    "1-10 คน",
+    "11-50 คน",
+    "51-200 คน",
+    "201-500 คน",
+    "501-1000 คน",
+    "1001-5000 คน",
+    "5000+ คน"
+  ],
+  "questions.company_profile.annual_revenue.options": [
+    "< 1 ล้านดอลลาร์",
+    "1-10 ล้านดอลลาร์",
+    "10-50 ล้านดอลลาร์",
+    "50-100 ล้านดอลลาร์",
+    "100-500 ล้านดอลลาร์",
+    "500 ล้าน - 1 พันล้านดอลลาร์",
+    "> 1 พันล้านดอลลาร์"
+  ],
+  "questions.company_profile.ownership_type.options": [
+    "จัดตั้งเอกชน",
+    "มหาชน",
+    "ธุรกิจครอบครัว",
+    "บริษัทในเครือ",
+    "จีนทุนร่วม",
+    "รัฐวิสาหกิจ",
+    "ไม่แสวงหาผลกำไร"
+  ],
+  "questions.swot.strengths_financial_resources.options": [
+    "ยอดเยี่ยม",
+    "ดี",
+    "พอเพียง",
+    "จำกัด",
+    "วิกฤต"
+  ],
+  "questions.swot.strengths_talent.options": [
+    "ยอดเยี่ยม",
+    "ดี",
+    "ปานกลาง",
+    "ต่ำกว่าปานกลาง",
+    "แย่"
+  ],
+  "questions.swot.strengths_operational_efficiency.options": [
+    "นำอุตสาหกรรม",
+    "สูงกว่าปานกลาง",
+    "ปานกลาง",
+    "ต่ำกว่าปานกลาง",
+    "ตามหลัง"
+  ],
+  "questions.swot.strengths_customer_loyalty.options": [
+    "สูงมาก (>90%)",
+    "สูง (70-90%)",
+    "ปานกลาง (50-70%)",
+    "ต่ำ (30-50%)",
+    "ต่ำมาก (<30%)"
+  ],
+  "questions.swot.strengths_supply_chain.options": [
+    "แข็งแกร่งมาก",
+    "แข็งแกร่ง",
+    "ปานกลาง",
+    "อ่อนแอ",
+    "อ่อนแอมาก"
+  ],
+  "questions.swot.weaknesses_legacy_systems.options": [
+    "น้อยที่สุด",
+    "ปานกลาง",
+    "มีนัยสำคัญ",
+    "รุนแรง",
+    "วิกฤต"
+  ],
+  "questions.swot.weaknesses_financial_constraints.options": [
+    "ไม่มี",
+    "น้อย",
+    "ปานกลาง",
+    "มีนัยสำคัญ",
+    "รุนแรง"
+  ],
+  "questions.swot.weaknesses_novation_pipeline.options": [
+    "ไพพ์ไลน์แข็งแกร่ง",
+    "พอเพียง",
+    "จำกัด",
+    "อ่อนแอ",
+    "ไม่มี"
+  ],
+  "questions.swot.weaknesses_org_structure.options": [
+    "ปรับตัวรวดเร็ว",
+    "ตามหน้าที่",
+    "มีซิโลบางส่วน",
+    "ซิโลหนัก",
+    "ทำงานไม่ได้"
+  ],
+  "questions.swot.weaknesses_data_analytics.options": [
+    "ขั้นสูง",
+    "กำลังพัฒนา",
+    "พื้นฐาน",
+    "ขั้นต่ำ",
+    "ไม่มี"
+  ],
+  "questions.swot.threats_supply_chain.options": [
+    "ต่ำมาก",
+    "ต่ำ",
+    "ปานกลาง",
+    "สูง",
+    "สูงมาก"
+  ],
+  "questions.swot.threats_technology_disruption.options": [
+    "ต่ำมาก",
+    "ต่ำ",
+    "ปานกลาง",
+    "สูง",
+    "สูงมาก"
+  ],
+  "questions.swot.threats_talent_shortage.options": [
+    "ไม่ใช่ปัญหา",
+    "น้อย",
+    "ปานกลาง",
+    "มีนัยสำคัญ",
+    "วิกฤต"
+  ],
+  "questions.swot.threats_cybersecurity.options": [
+    "ป้องกันได้ดี",
+    "พอเพียง",
+    "มีช่องว่างบางส่วน",
+    "ความเสี่ยงสูง",
+    "ความเสี่ยงวิกฤต"
+  ],
+  "questions.strategic_planning.strategic_horizon.options": [
+    "1 ปี",
+    "2-3 ปี",
+    "3-5 ปี",
+    "5+ ปี"
+  ],
+  "questions.strategic_planning.kpis_defined.options": [
+    "กำหนดและคASCADE ครบถ้วน",
+    "กำหนดบางส่วน",
+    "กำหนดแต่ไม่ได้CASCADE",
+    "ไม่ได้กำหนด"
+  ],
+  "questions.strategic_planning.strategy_review_frequency.options": [
+    "รายเดือน",
+    "รายไตรมาส",
+    "รายครึ่งปี",
+    "รายปี",
+    "เฉพาะกรณีจำเป็น"
+  ],
+  "questions.strategic_planning.okr_adoption.options": [
+    "นำไปใช้ครบถ้วน",
+    "ระยะทดลอง",
+    "วางแผนจะนำไปใช้",
+    "ไม่ได้ใช้"
+  ],
+  "questions.strategic_planning.resource_allocation.options": [
+    "กระบวนการพอร์ตโฟลิโอทางการ",
+    "งบประมาณรายปี",
+    "เฉพาะกรณี",
+    "ไม่เป็นระบบ"
+  ],
+  "questions.strategic_planning.scenario_planning.options": [
+    "ใช่ ทำเป็นประจำ",
+    "บางครั้ง",
+    "นادرา",
+    "ไม่เคย"
+  ],
+  "questions.strategic_planning.competitive_positioning.options": [
+    "ผู้นำด้านต้นทุน",
+    "ความแตกต่าง",
+    "โฟกัส/นิช",
+    "ติดอยู่กลาง",
+    "กำลังเปลี่ยนผ่าน"
+  ],
+  "questions.strategic_planning.strategy_communication.options": [
+    "ยอดเยี่ยม - ทุกคนเข้าใจ",
+    "ดี - ผู้จัดการเข้าใจ",
+    "พอใช้ - ผู้บริหารเข้าใจ",
+    "แย่ - 不明確"
+  ],
+  "questions.strategic_planning.change_management.options": [
+    "แข็งแกร่ง",
+    "กำลังพัฒนา",
+    "พื้นฐาน",
+    "อ่อนแอ",
+    "ไม่มี"
+  ],
+  "questions.production_management.production_type.options": [
+    "ผลิตเพื่อสต็อก (MTS)",
+    "ผลิตตามออเดอร์ (MTO)",
+    "ออกแบบตามออเดอร์ (ETO)",
+    "ประกอบตามออเดอร์ (ATO)",
+    "โหมดผสม",
+    "ผลิตกระบวนการ",
+    "โรงงานงาน"
+  ],
+  "questions.production_management.production_scheduling.options": [
+    "วางแผนและจัดตารางขั้นสูง (APS)",
+    "ฐานบน ERP/MRP",
+    "Kanban/ดึง",
+    "Spreadsheet/แมนนวล",
+    "ทฤษฎีข้อจำกัด"
+  ],
+  "questions.production_management.lean_maturity.options": [
+    "ระดับโลก",
+    "ขั้นสูง",
+    "ระดับกลาง",
+    "พื้นฐาน",
+    "เพิ่งเริ่มต้น",
+    "ไม่ได้นำไปใช้"
+  ],
+  "questions.production_management.lean_tools_used.options": [
+    "5S",
+    "การทำแผนที่กระบวนการเพิ่มค่า",
+    "ไคเซ็น",
+    "Kanban",
+    "SMED",
+    "TPM",
+    "งานมาตรฐาน",
+    "Heijunka",
+    "Poka-Yoke",
+    "Andon",
+    "Gemba Walks",
+    "Hoshin Kanri"
+  ],
+  "questions.production_management.quality_system.options": [
+    "ISO 9001",
+    "IATF 16949",
+    "ISO 13485",
+    "AS9100",
+    "Six Sigma",
+    "ระบบภายในองค์กรเท่านั้น",
+    "ไม่มีระบบทางการ"
+  ],
+  "questions.production_management.wip_levels.options": [
+    "เหมาะสมที่สุด",
+    "ปานกลาง",
+    "สูง",
+    "เกินไป",
+    "ไม่ทราบ"
+  ],
+  "questions.production_management.maintenance_strategy.options": [
+    "บำรุงรักษาเชิงพยากรณ์ (PdM)",
+    "บำรุงรักษาป้องกัน (PM)",
+    "บำรุงรักษาเชิงสภาพ (CBM)",
+    "ซ่อมแซมเมื่อเสีย/การชำรุด",
+    "RCM (การบำรุงรักษาเชิงความน่าเชื่อถือ)",
+    "TPM"
+  ],
+  "questions.production_management.production_kpis.options": [
+    "OEE",
+    "FPY",
+    "Cycle Time",
+    "Throughput",
+    "อัตราการใช้ความจุ",
+    "ส่งตรงเวลา",
+    "อัตราขยะ",
+    "อัตราแก้ไข",
+    "ประสิทธิภาพแรงงาน",
+    "พลังงานต่อหน่วย",
+    "การปฏิบัติตามตาราง",
+    "เวลาเปลี่ยนโมเดล"
+  ],
+  "questions.production_management.digital_manufacturing.options": [
+    "ขั้นสูง (Digital Twin, AI)",
+    "เชื่อมต่อ (IIoT, Real-time)",
+    "อัตโนมัติ (MES, SCADA)",
+    "พื้นฐาน (ERP, Barcode)",
+    "แมนนวล/กระดาษ"
+  ],
+  "questions.sales_marketing.sales_model.options": [
+    "ขายตรง",
+    "ช่องทาง/พาร์ทเนอร์",
+    "อีคอมเมิร์ซ/ตรง",
+    "Inside Sales",
+    "Field Sales",
+    "ผสมผสาน",
+    "สมัครสมาชิก/SaaS",
+    "โครงการ"
+  ],
+  "questions.sales_marketing.lead_generation_channels.options": [
+    "Inbound/เนื้อหา",
+    "ค้นหาจ่ายเงิน",
+    "โซเชียลจ่ายเงิน",
+    "อีเมลมาร์เก็ตติ้ง",
+    "กิจกรรม/งานแสดง",
+    "แนะนำ",
+    "พาร์ทเนอร์/ช่องทาง",
+    "Cold Outreach",
+    "ABM",
+    "SEO/Organic"
+  ],
+  "questions.sales_marketing.crm_system.options": [
+    "Salesforce",
+    "HubSpot",
+    "Microsoft Dynamics",
+    "Pipedrive",
+    "Zoho",
+    "Custom/ERP",
+    "ไม่มี/Spreadsheets"
+  ],
+  "questions.sales_marketing.marketing_automation.options": [
+    "HubSpot",
+    "Marketo",
+    "Pardot",
+    "ActiveCampaign",
+    "Mailchimp",
+    "Custom",
+    "ไม่มี"
+  ],
+  "questions.sales_marketing.sales_process_maturity.options": [
+    "เหมาะสมที่สุด (ขับเคลื่อนด้วยข้อมูล)",
+    "กำหนดและวัดได้",
+    "กำหนดแต่ไม่ได้วัด",
+    "เฉพาะกรณี",
+    "วุ่นวาย"
+  ],
+  "questions.sales_marketing.pricing_strategy.options": [
+    "มูลค่า",
+    "ต้นทุนบวก",
+    "แข่งขัน",
+    "เจาะตลาด",
+    "Skimming",
+    "ไดนามิก",
+    "สมัครสมาชิก/ระดับ"
+  ],
+  "questions.sales_marketing.competitive_intelligence.options": [
+    "ทางการ/ต่อเนื่อง",
+    "เป็นระยะ",
+    "เฉพาะกรณี",
+    "ปฏิกิริยา",
+    "ไม่มี"
+  ],
+  "questions.sales_marketing.customer_feedback_loop.options": [
+    "เป็นระบบ (NPS, CSAT, Action)",
+    "สำรวจเป็นประจำ",
+    "บางครั้ง",
+    "ปฏิกิริยาเท่านั้น",
+    "ไม่มี"
+  ],
+  "questions.sales_marketing.sales_marketing_alignment.options": [
+    "จัดสอดคล้องเต็มที่ (SLA)",
+    "ร่วมมือดี",
+    "จัดสอดคล้องบางส่วน",
+    "ไม่จัดสอดคล้อง",
+    "ทำงานแยกต่างหาก"
+  ],
+  "questions.rd_innovation.rd_structure.options": [
+    "รวมศูนย์",
+    "กระจายศูนย์/หน่วยธุรกิจ",
+    "เมทริกซ์",
+    "เสมือนจริง/นวัตกรรมเปิด",
+    "จ้างนอก"
+  ],
+  "questions.rd_innovation.innovation_strategy.options": [
+    "ใช่ ครบถ้วน",
+    "ใช่ พื้นฐาน",
+    "กำลังพัฒนา",
+    "ไม่"
+  ],
+  "questions.rd_innovation.new_product_development_process.options": [
+    "Stage-Gate (เหมาะสมที่สุด)",
+    "Stage-Gate (มาตรฐาน)",
+    "Agile/Lean Startup",
+    "ผสมผสาน",
+    "เฉพาะกรณี",
+    "ไม่มีทางการ"
+  ],
+  "questions.rd_innovation.rd_collaboration.options": [
+    "มหาวิทยาลัย",
+    "สถาบันวิจัย",
+    "สตาร์ทอัพ",
+    "คู่แข่ง",
+    "ผู้จัดหา",
+    "ลูกค้า",
+    "ห้องปฏิบัติการรัฐบาล",
+    "ไม่มี"
+  ],
+  "questions.rd_innovation.open_innovation.options": [
+    "กว้างขวาง",
+    "ปานกลาง",
+    "จำกัด",
+    "กำลังสำรวจ",
+    "ไม่มี"
+  ],
+  "questions.rd_innovation.technology_scanning.options": [
+    "เป็นระบบ/ต่อเนื่อง",
+    "เป็นระยะ",
+    "เฉพาะกรณี",
+    "ไม่มี"
+  ],
+  "questions.rd_innovation.idea_management.options": [
+    "แพลตฟอร์มดิจิทัล (ใช้งานจริง)",
+    "แพลตฟอร์มดิจิทัล (ใช้งานน้อย)",
+    "กล่องข้อเสนอแนะ",
+    "แฮกกאתון/กิจกรรม",
+    "ไม่เป็นทางการ",
+    "ไม่มี"
+  ],
+  "questions.rd_innovation.r_digital_tools.options": [
+    "PLM",
+    "Simulation/CAE",
+    "สมุดบันทึกห้องปฏิบัติการอิเล็กทรอนิกส์",
+    "การจัดการความต้องการ",
+    "การจัดการพอร์ตโฟลิโอโครงการ",
+    "การวิเคราะห์ข้อมูล/AI",
+    "แพลตฟอร์มร่วมมือ",
+    "ไม่มี"
+  ],
+  "questions.rd_innovation.rd_productivity_metrics.options": [
+    "R&D Spend/Revenue",
+    "Patents per $M R&D",
+    "New Product Revenue %",
+    "Time to Market",
+    "Project Success Rate",
+    "Resource Utilization",
+    "ไม่มี"
+  ],
+  "questions.rd_innovation.technical_debt.options": [
+    "น้อยที่สุด",
+    "จัดการได้",
+    "มีนัยสำคัญ",
+    "วิกฤต",
+    "ไม่ทราบ"
+  ],
+  "questions.rd_innovation.sustainability_innovation.options": [
+    "กลยุทธ์หลัก",
+    "โครงการสำคัญ",
+    "กำลังสำรวจ",
+    "ไม่ใช่ความสำคัญ"
+  ],
+  "questions.productivity.labor_productivity_trend.options": [
+    "ดีขึ้น >5%/ปี",
+    "ดีขึ้น 1-5%/ปี",
+    "คงที่",
+    "ลดลง 1-5%/ปี",
+    "ลดลง >5%/ปี"
+  ],
+  "questions.productivity.automation_level.options": [
+    "อัตโนมัติเต็มที่/ไฟดับ",
+    "อัตโนมัติสูง",
+    "อัตโนมัติบางส่วน",
+    "แมนนวลพร้อมเครื่องมือ",
+    "แมนนวลเต็มที่"
+  ],
+  "questions.productivity.process_standardization.options": [
+    "มาตรฐานครบถ้วน",
+    "มาตรฐานส่วนใหญ่",
+    "มาตรฐานบางส่วน",
+    "ขั้นต่ำ",
+    "ไม่มีมาตรฐาน"
+  ],
+  "questions.productivity.continuous_improvement.options": [
+    "วัฒนธรรมที่ฝังราก",
+    "โครงการ aktif",
+    "โครงการทดลอง",
+    "เฉพาะกรณี",
+    "ไม่มี"
+  ],
+  "questions.productivity.productivity_measurement.options": [
+    "มาตรฐานแรงงาน/วิศวกรรม",
+    "การศึกษาเวลา",
+    "MOST/MTM",
+    "ติดตาม Real-time",
+    "รายงาน ERP/MES",
+    "ติดตามแมนนวล",
+    "ไม่ได้วัด"
+  ],
+  "questions.productivity.bottleneck_analysis.options": [
+    "รายสัปดาห์",
+    "รายเดือน",
+    "รายไตรมาส",
+    "รายปี",
+    "นัดนาน/ไม่เคย"
+  ],
+  "questions.productivity.workforce_skills_matrix.options": [
+    "ปัจจุบันและครอบคลุม",
+    "ปัจจุบันแต่บางส่วน",
+    "ล้าสมัย",
+    "กำลังพัฒนา",
+    "ไม่มี"
+  ],
+  "questions.productivity.cross_training_level.options": [
+    "กว้างขวาง",
+    "ดี",
+    "ปานกลาง",
+    "จำกัด",
+    "ไม่มี"
+  ],
+  "questions.productivity.ergonomics_safety.options": [
+    "ระดับโลก",
+    "แข็งแกร่ง",
+    "ปฏิบัติตามกฎ",
+    "พื้นฐาน",
+    "ขั้นต่ำ"
+  ],
+  "questions.waste_management.environmental_certifications.options": [
+    "ISO 14001",
+    "EMAS",
+    "ISO 50001",
+    "LEED",
+    "B Corp",
+    "คาร์บอนนิวทรัล",
+    "Science Based Targets",
+    "ไม่มี"
+  ],
+  "questions.waste_management.waste_tracking_system.options": [
+    "ดิจิทัล Real-time",
+    "รวมกับ ERP",
+    "แมนนวลเป็นระยะ",
+    "Spreadsheet พื้นฐาน",
+    "ไม่มี"
+  ],
+  "questions.waste_management.circular_economy_initiatives.options": [
+    "ออกแบบผลิตภัณฑ์เพื่อรีไซเคิล",
+    "รีแมนูแฟกเจอร์/ปรับปรุงใหม่",
+    "โปรแกรมคืนสินค้า",
+    "ซิมไบโอซิสอุตสาหกรรม",
+    "ทดแทนวัสดุ",
+    "ลดบรรจุภัณฑ์",
+    "ไม่มี"
+  ],
+  "questions.waste_management.carbon_footprint_scope3.options": [
+    "วัดครบถ้วน",
+    "บางส่วน",
+    "วางแผน",
+    "ไม่ได้วัด"
+  ],
+  "questions.waste_management.lean_green_integration.options": [
+    "รวมเต็มที่",
+    "โครงการจัดสอดคล้อง",
+    "โครงการแยกกัน",
+    "Lean เท่านั้น",
+    "Green เท่านั้น",
+    "ไม่มีทั้งคู่"
+  ],
+  "questions.waste_management.supplier_environmental_requirements.options": [
+    "ใบรับรองบังคับ",
+    "ให้คะแนน/ประเมิน",
+    "จริยธรรมปฏิบัติ",
+    "ปฏิบัติตามพื้นฐาน",
+    "ไม่มี"
+  ],
+  "questions.waste_management.sustainability_reporting.options": [
+    "ปฏิบัติตาม GRI/SASB/TCFD",
+    "รายงานอาสา",
+    "ภายในองค์กรเท่านั้น",
+    "บังคับโดยกฎระเบียบเท่านั้น",
+    "ไม่มี"
+  ],
+  "questions.bcg.bioeconomy_strategy.options": [
+    "ใช่ ครบถ้วน",
+    "ใช่ พื้นฐาน",
+    "กำลังพัฒนา",
+    "ไม่"
+  ],
+  "questions.bcg.bio_certifications.options": [
+    "USDA BioPreferred",
+    "OK biobased",
+    "ISCC PLUS",
+    "REDcert²",
+    "RSB",
+    "Bonsucro",
+    "อื่นๆ"
+  ],
+  "questions.bcg.biotech_adoption.options": [
+    "ขั้นสูง (การหมัก, เอนไซม์, ชีววิศวกรรม)",
+    "ปานกลาง (กระบวนการชีวภาพบางส่วน)",
+    "พื้นฐาน (เฉพาะอินพุตชีวภาพ)",
+    "ไม่มี"
+  ],
+  "questions.bcg.bio_supply_chain.options": [
+    "รวมและติดตามได้ครบถ้วน",
+    "ติดตามได้บางส่วน",
+    "จัดหาพื้นฐาน",
+    "ไม่ได้พัฒนา"
+  ],
+  "questions.bcg.circular_strategy.options": [
+    "ใช่ ครบถ้วน",
+    "ใช่ พื้นฐาน",
+    "กำลังพัฒนา",
+    "ไม่"
+  ],
+  "questions.bcg.circular_maturity.options": [
+    "ฟื้นฟู (Cradle-to-Cradle)",
+    "วนคืน (Closed Loops)",
+    "โฟกัสรีไซเคิล",
+    "ลดขยะเท่านั้น",
+    "เส้นตรง (Take-Make-Waste)"
+  ],
+  "questions.bcg.product_lifecycle_extension.options": [
+    "บริการซ่อมแซม",
+    "ปรับปรุงใหม่/รีแมนูแฟกเจอร์",
+    "ผลิตภัณฑ์เป็นบริการ",
+    "คืน/ซื้อคืน",
+    "อัพไซเคิล",
+    "ออกแบบโมดูลาร์",
+    "ไม่มี"
+  ],
+  "questions.bcg.waste_to_resource.options": [
+    "ซิมไบโอซิสอุตสาหกรรม",
+    "เพิ่มค่าผลพลอยได้",
+    "ฟื้นฟูความร้อนขยะ",
+    "การย่อยสลายไร้ออกซิเจน",
+    "ทำปุ๋ย",
+    "รีไซเคิลเคมี",
+    "ไม่มี"
+  ],
+  "questions.bcg.circular_design_principles.options": [
+    "ออกแบบเพื่อความทนทาน",
+    "ออกแบบเพื่อซ่อมแซม",
+    "ออกแบบเพื่อถอดแยก",
+    "ออกแบบเพื่อรีไซเคิล",
+    "ออกแบบเพื่อนำกลับมาใช้ใหม่",
+    "มาตรฐานวัสดุ",
+    "ไม่มี"
+  ],
+  "questions.bcg.packaging_circularity.options": [
+    "100% นำกลับมาใช้/รีไซเคิล/ย่อยสลายได้",
+    "ส่วนใหญ่รีไซเคิลได้",
+    "บางส่วนรีไซเคิลได้",
+    "ใช้ครั้งเดียวเป็นหลัก",
+    "ไม่ได้ประเมิน"
+  ],
+  "questions.bcg.circular_kpis.options": [
+    "Material Circularity Indicator (MCI)",
+    "Circular Transition Indicators (CTI)",
+    "อัตรารีไซเคิล",
+    "เปอร์เซ็นต์เนื้อหารีไซเคิล",
+    "การขยายอายุผลิตภัณฑ์",
+    "ประสิทธิภาพทรัพยากร",
+    "ขยะต่อหน่วย",
+    "ไม่มี"
+  ],
+  "questions.bcg.green_strategy.options": [
+    "ใช่ มุ่งสู่ Net Zero (SBTi)",
+    "ใช่ มุ่งสู่ Carbon Neutral",
+    "ใช่ ยั่งยืนพื้นฐาน",
+    "กำลังพัฒนา",
+    "ไม่"
+  ],
+  "questions.bcg.scope3_emissions.options": [
+    "ใช่ ครบถ้วน",
+    "ใช่ บางส่วน (หมวดสำคัญ)",
+    "กำลังดำเนินการ",
+    "ไม่"
+  ],
+  "questions.bcg.water_stewardship.options": [
+    "ขั้นสูง (AWS Certified)",
+    "ครอบคลุม",
+    "ตรวจสอบพื้นฐาน",
+    "ปฏิบัติตามกฎเท่านั้น",
+    "ไม่มี"
+  ],
+  "questions.bcg.biodiversity_action.options": [
+    "รายงาน TNFD",
+    "เป้าหมาย No Net Loss/Net Gain",
+    "ฟื้นฟูที่อยู่อาศัย",
+    "การใช้ที่ดินยั่งยืน",
+    "โซ่อุปทานปลอดป่าที่ทำลาย",
+    "ไม่มี"
+  ],
+  "questions.bcg.green_finance.options": [
+    "Green Bonds",
+    "Sustainability-linked Loans",
+    "Green Loans",
+    "Carbon Credits",
+    "ESG-linked Derivatives",
+    "ไม่มี"
+  ],
+  "questions.bcg.carbon_pricing_internal.options": [
+    "ใช่ ราคาเงา",
+    "ใช่ ค่าธรรมเนียมภายใน",
+    "วางแผน",
+    "ไม่"
+  ],
+  "questions.bcg.climate_transition_plan.options": [
+    "ใช่ ครบถ้วน",
+    "ใช่ พื้นฐาน",
+    "กำลังพัฒนา",
+    "ไม่"
+  ],
+  "questions.bcg.bcg_governance.options": [
+    "คณะกรรมการยั่งยืนระดับคณะกรรมการ",
+    "Chief Sustainability Officer",
+    "คณะกรรมการกำกับดูแล BCG",
+    "กลุ่มทำงานข้ามหน่วยงาน",
+    "คณะที่ปรึกษาภายนอก",
+    "ไม่มีทางการ"
+  ],
+  "questions.bcg.bcg_kpi_integration.options": [
+    "ใช่ น้ำหนักสำคัญ",
+    "ใช่ น้ำหนักปานกลาง",
+    "ใช่ น้ำหนักน้อย",
+    "ไม่"
+  ],
+  "questions.bcg.bcg_digital_tools.options": [
+    "LCA Software (SimaPro, GaBi, openLCA)",
+    "Material Flow Analysis",
+    "Digital Product Passport",
+    "Blockchain Traceability",
+    "AI for Resource Optimization",
+    "IoT for Energy/Resource Monitoring",
+    "ไม่มี"
+  ],
+  "questions.bcg.bcg_stakeholder_engagement.options": [
+    "ลูกค้า",
+    "ผู้จัดหา",
+    "นักลงทุน",
+    "พนักงาน",
+    "ชุมชนท้องถิ่น",
+    "ผู้กำกับดูแล",
+    "NGOs",
+    "วิชาการ"
+  ],
+  "questions.bcg.bcg_training.options": [
+    "โปรแกรมครบถ้วน",
+    "อบรมตามบทบาท",
+    "เพียงสร้างความตระหนัก",
+    "เฉพาะกรณี",
+    "ไม่มี"
+  ],
+  "questions.bcg.bcg_regulatory_readiness.options": [
+    "พร้อมครบถ้วน",
+    "ก้าวหน้ามาก",
+    "ช่วงต้น",
+    "ยังไม่เริ่ม",
+    "ไม่รู้"
+  ],
+  "questions.oee.oee_tracked.options": [
+    "ใช่ - Real-time/อัตโนมัติ",
+    "ใช่ - แมนนวล/รายวัน",
+    "ใช่ - ศึกษาเป็นระยะ",
+    "ไม่ - ไม่ได้ติดตาม"
+  ],
+  "questions.oee.oee_data_collection.options": [
+    "อัตโนมัติ (IIoT/MES)",
+    "ครึ่งอัตโนมัติ (PLC + แมนนวล)",
+    "แมนนวล (กระดาษ/Excel)",
+    "บันทึกผู้ปฏิบัติการ",
+    "ไม่ได้รวบรวม"
+  ],
+  "questions.oee.oee_frequency.options": [
+    "Real-time",
+    "ต่อกะ",
+    "รายวัน",
+    "รายสัปดาห์",
+    "รายเดือน",
+    "เฉพาะกรณี"
+  ],
+  "questions.oee.six_big_losses_tracked.options": [
+    "ติดตามทั้ง 6",
+    "ติดตาม 4-5",
+    "ติดตาม 2-3",
+    "เฉพาะรวม",
+    "ไม่จัดหมวดหมู่"
+  ],
+  "questions.oee.availability_losses.options": [
+    "หยุดชะงัก/ชำรุด",
+    "หยุดวางแผน (เปลี่ยนโมเดล)",
+    "หยุดวางแผน (บำรุงรักษา)",
+    "ตั้งค่า/ปรับ",
+    "ไม่มีผู้ปฏิบัติ/วัสดุ",
+    "อื่นๆ"
+  ],
+  "questions.oee.performance_losses.options": [
+    "หยุดสั้น/Idle",
+    "ลดความเร็ว",
+    "หยุดน้อย",
+    "สูญเสียตอนเริ่มต้น",
+    "เกินเวลาเปลี่ยนโมเดล",
+    "อื่นๆ"
+  ],
+  "questions.oee.quality_losses.options": [
+    "ขยะตอนเริ่มต้น",
+    "ขยะระหว่างผลิต",
+    "แก้ไข",
+    "ข้อบกพร่องระหว่างกระบวนการ",
+    "คืนจากลูกค้า",
+    "อื่นๆ"
+  ],
+  "questions.oee.tpm_program.options": [
+    "TPM เต็มรูปแบบ (8 เสา)",
+    "TPM บางส่วน (3-5 เสา)",
+    "ปรับปรุงจุดเน้น",
+    "บำรุงรักษาอัตโนมัติ",
+    "บำรุงรักษาวางแผน",
+    "ไม่มี TPM"
+  ],
+  "questions.oee.oee_visual_management.options": [
+    "แสดงผล Real-time",
+    "กระดานรายวัน",
+    "รายงานรายสัปดาห์",
+    "รายงานรายเดือน",
+    "ไม่มี"
+  ],
+  "questions.oee.oee_operator_engagement.options": [
+    "สูง (เป็นเจ้าของ OEE)",
+    "ปานกลาง (มีส่วนร่วม)",
+    "ต่ำ (ทราบเท่านั้น)",
+    "ไม่มี"
+  ],
+  "questions.oee.biggest_oee_loss.options": [
+    "Availability - ชำรุด",
+    "Availability - เปลี่ยนโมเดล",
+    "Performance - ลดความเร็ว",
+    "Performance - หยุดสั้น",
+    "Quality - ขยะ",
+    "Quality - แก้ไข",
+    "ไม่แน่ใจ"
+  ]
+}

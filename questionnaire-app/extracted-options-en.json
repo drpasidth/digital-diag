@@ -1,0 +1,820 @@
+{
+  "questions.company_profile.industry.options": [
+    "Manufacturing",
+    "Technology",
+    "Healthcare",
+    "Financial Services",
+    "Retail",
+    "Food & Beverage",
+    "Automotive",
+    "Chemicals",
+    "Textiles",
+    "Other"
+  ],
+  "questions.company_profile.company_size.options": [
+    "1-10",
+    "11-50",
+    "51-200",
+    "201-500",
+    "501-1000",
+    "1001-5000",
+    "5000+"
+  ],
+  "questions.company_profile.annual_revenue.options": [
+    "<$1M",
+    "$1M-$10M",
+    "$10M-$50M",
+    "$50M-$100M",
+    "$100M-$500M",
+    "$500M-$1B",
+    ">$1B"
+  ],
+  "questions.company_profile.ownership_type.options": [
+    "Private",
+    "Public",
+    "Family-owned",
+    "Subsidiary",
+    "Joint Venture",
+    "State-owned",
+    "Non-profit"
+  ],
+  "questions.swot.strengths_financial_resources.options": [
+    "Excellent",
+    "Good",
+    "Adequate",
+    "Limited",
+    "Critical"
+  ],
+  "questions.swot.strengths_talent.options": [
+    "Excellent",
+    "Good",
+    "Average",
+    "Below Average",
+    "Poor"
+  ],
+  "questions.swot.strengths_operational_efficiency.options": [
+    "Industry Leader",
+    "Above Average",
+    "Average",
+    "Below Average",
+    "Lagging"
+  ],
+  "questions.swot.strengths_customer_loyalty.options": [
+    "Very High (>90%)",
+    "High (70-90%)",
+    "Moderate (50-70%)",
+    "Low (30-50%)",
+    "Very Low (<30%)"
+  ],
+  "questions.swot.strengths_supply_chain.options": [
+    "Very Strong",
+    "Strong",
+    "Moderate",
+    "Weak",
+    "Very Weak"
+  ],
+  "questions.swot.weaknesses_legacy_systems.options": [
+    "Minimal",
+    "Moderate",
+    "Significant",
+    "Severe",
+    "Critical"
+  ],
+  "questions.swot.weaknesses_financial_constraints.options": [
+    "None",
+    "Minor",
+    "Moderate",
+    "Significant",
+    "Severe"
+  ],
+  "questions.swot.weaknesses_innovation_pipeline.options": [
+    "Strong Pipeline",
+    "Adequate",
+    "Limited",
+    "Weak",
+    "Non-existent"
+  ],
+  "questions.swot.weaknesses_org_structure.options": [
+    "Agile",
+    "Functional",
+    "Some Silos",
+    "Heavy Silos",
+    "Dysfunctional"
+  ],
+  "questions.swot.weaknesses_data_analytics.options": [
+    "Advanced",
+    "Developing",
+    "Basic",
+    "Minimal",
+    "None"
+  ],
+  "questions.swot.threats_supply_chain.options": [
+    "Very Low",
+    "Low",
+    "Moderate",
+    "High",
+    "Very High"
+  ],
+  "questions.swot.threats_technology_disruption.options": [
+    "Very Low",
+    "Low",
+    "Moderate",
+    "High",
+    "Very High"
+  ],
+  "questions.swot.threats_talent_shortage.options": [
+    "Not an issue",
+    "Minor",
+    "Moderate",
+    "Significant",
+    "Critical"
+  ],
+  "questions.swot.threats_cybersecurity.options": [
+    "Well Protected",
+    "Adequate",
+    "Some Gaps",
+    "Significant Risk",
+    "Critical Risk"
+  ],
+  "questions.strategic_planning.strategic_horizon.options": [
+    "1 year",
+    "2-3 years",
+    "3-5 years",
+    "5+ years"
+  ],
+  "questions.strategic_planning.kpis_defined.options": [
+    "Fully defined & cascaded",
+    "Partially defined",
+    "Defined but not cascaded",
+    "Not defined"
+  ],
+  "questions.strategic_planning.strategy_review_frequency.options": [
+    "Monthly",
+    "Quarterly",
+    "Semi-annually",
+    "Annually",
+    "Ad-hoc only"
+  ],
+  "questions.strategic_planning.okr_adoption.options": [
+    "Fully implemented",
+    "Pilot phase",
+    "Planning to adopt",
+    "Not using"
+  ],
+  "questions.strategic_planning.resource_allocation.options": [
+    "Formal portfolio process",
+    "Annual budgeting",
+    "Ad-hoc",
+    "Not systematic"
+  ],
+  "questions.strategic_planning.scenario_planning.options": [
+    "Yes, regularly",
+    "Occasionally",
+    "Rarely",
+    "Never"
+  ],
+  "questions.strategic_planning.competitive_positioning.options": [
+    "Cost Leadership",
+    "Differentiation",
+    "Focus/Niche",
+    "Stuck in Middle",
+    "Transitioning"
+  ],
+  "questions.strategic_planning.strategy_communication.options": [
+    "Excellent - everyone knows it",
+    "Good - managers know it",
+    "Fair - leadership knows it",
+    "Poor - unclear"
+  ],
+  "questions.strategic_planning.change_management.options": [
+    "Strong",
+    "Developing",
+    "Basic",
+    "Weak",
+    "Non-existent"
+  ],
+  "questions.production_management.production_type.options": [
+    "Make-to-Stock (MTS)",
+    "Make-to-Order (MTO)",
+    "Engineer-to-Order (ETO)",
+    "Assemble-to-Order (ATO)",
+    "Mixed Mode",
+    "Process Manufacturing",
+    "Job Shop"
+  ],
+  "questions.production_management.production_scheduling.options": [
+    "Advanced Planning & Scheduling (APS)",
+    "ERP/MRP based",
+    "Kanban/Pull",
+    "Spreadsheet/Manual",
+    "Theory of Constraints"
+  ],
+  "questions.production_management.lean_maturity.options": [
+    "World Class",
+    "Advanced",
+    "Intermediate",
+    "Basic",
+    "Just Starting",
+    "Not Implemented"
+  ],
+  "questions.production_management.lean_tools_used.options": [
+    "5S",
+    "Value Stream Mapping",
+    "Kaizen",
+    "Kanban",
+    "SMED",
+    "TPM",
+    "Standard Work",
+    "Heijunka",
+    "Poka-Yoke",
+    "Andon",
+    "Gemba Walks",
+    "Hoshin Kanri"
+  ],
+  "questions.production_management.quality_system.options": [
+    "ISO 9001",
+    "IATF 16949",
+    "ISO 13485",
+    "AS9100",
+    "Six Sigma",
+    "Internal System Only",
+    "None Formal"
+  ],
+  "questions.production_management.wip_levels.options": [
+    "Optimized",
+    "Moderate",
+    "High",
+    "Excessive",
+    "Unknown"
+  ],
+  "questions.production_management.maintenance_strategy.options": [
+    "Predictive (PdM)",
+    "Preventive (PM)",
+    "Condition-based (CBM)",
+    "Reactive/Breakdown",
+    "RCM (Reliability Centered)",
+    "TPM"
+  ],
+  "questions.production_management.production_kpis.options": [
+    "OEE",
+    "FPY",
+    "Cycle Time",
+    "Throughput",
+    "Capacity Utilization",
+    "On-time Delivery",
+    "Scrap Rate",
+    "Rework Rate",
+    "Labor Productivity",
+    "Energy per Unit",
+    "Schedule Adherence",
+    "Changeover Time"
+  ],
+  "questions.production_management.digital_manufacturing.options": [
+    "Advanced (Digital Twin, AI)",
+    "Connected (IIoT, Real-time)",
+    "Automated (MES, SCADA)",
+    "Basic (ERP, Barcode)",
+    "Manual/Paper-based"
+  ],
+  "questions.sales_marketing.sales_model.options": [
+    "Direct Sales",
+    "Channel/Partner",
+    "E-commerce/Direct",
+    "Inside Sales",
+    "Field Sales",
+    "Hybrid",
+    "Subscription/SaaS",
+    "Project-based"
+  ],
+  "questions.sales_marketing.lead_generation_channels.options": [
+    "Inbound/Content",
+    "Paid Search",
+    "Paid Social",
+    "Email Marketing",
+    "Events/Trade Shows",
+    "Referrals",
+    "Partner/Channel",
+    "Cold Outreach",
+    "ABM",
+    "SEO/Organic"
+  ],
+  "questions.sales_marketing.crm_system.options": [
+    "Salesforce",
+    "HubSpot",
+    "Microsoft Dynamics",
+    "Pipedrive",
+    "Zoho",
+    "Custom/ERP",
+    "None/Spreadsheets"
+  ],
+  "questions.sales_marketing.marketing_automation.options": [
+    "HubSpot",
+    "Marketo",
+    "Pardot",
+    "ActiveCampaign",
+    "Mailchimp",
+    "Custom",
+    "None"
+  ],
+  "questions.sales_marketing.sales_process_maturity.options": [
+    "Optimized (Data-driven)",
+    "Defined & Measured",
+    "Defined but not Measured",
+    "Ad-hoc",
+    "Chaotic"
+  ],
+  "questions.sales_marketing.pricing_strategy.options": [
+    "Value-based",
+    "Cost-plus",
+    "Competitive",
+    "Penetration",
+    "Skimming",
+    "Dynamic",
+    "Subscription/Tiered"
+  ],
+  "questions.sales_marketing.competitive_intelligence.options": [
+    "Formal/Continuous",
+    "Periodic",
+    "Ad-hoc",
+    "Reactive",
+    "None"
+  ],
+  "questions.sales_marketing.customer_feedback_loop.options": [
+    "Systematic (NPS, CSAT, Action)",
+    "Regular Surveys",
+    "Occasional",
+    "Reactive Only",
+    "None"
+  ],
+  "questions.sales_marketing.sales_marketing_alignment.options": [
+    "Fully Aligned (SLA)",
+    "Good Collaboration",
+    "Some Alignment",
+    "Misaligned",
+    "Siloed"
+  ],
+  "questions.rd_innovation.rd_structure.options": [
+    "Centralized",
+    "Decentralized/Business Unit",
+    "Matrix",
+    "Virtual/Open Innovation",
+    "Outsourced"
+  ],
+  "questions.rd_innovation.innovation_strategy.options": [
+    "Yes, comprehensive",
+    "Yes, basic",
+    "In development",
+    "No"
+  ],
+  "questions.rd_innovation.new_product_development_process.options": [
+    "Stage-Gate (Optimized)",
+    "Stage-Gate (Standard)",
+    "Agile/Lean Startup",
+    "Hybrid",
+    "Ad-hoc",
+    "None Formal"
+  ],
+  "questions.rd_innovation.rd_collaboration.options": [
+    "Universities",
+    "Research Institutes",
+    "Startups",
+    "Competitors",
+    "Suppliers",
+    "Customers",
+    "Government Labs",
+    "None"
+  ],
+  "questions.rd_innovation.open_innovation.options": [
+    "Extensive",
+    "Moderate",
+    "Limited",
+    "Exploring",
+    "None"
+  ],
+  "questions.rd_innovation.technology_scanning.options": [
+    "Systematic/Continuous",
+    "Periodic",
+    "Ad-hoc",
+    "None"
+  ],
+  "questions.rd_innovation.idea_management.options": [
+    "Digital Platform (Active)",
+    "Digital Platform (Low Usage)",
+    "Suggestion Box",
+    "Hackathons/Events",
+    "Informal",
+    "None"
+  ],
+  "questions.rd_innovation.r_digital_tools.options": [
+    "PLM",
+    "Simulation/CAE",
+    "Electronic Lab Notebook",
+    "Requirements Management",
+    "Project Portfolio Management",
+    "Data Analytics/AI",
+    "Collaboration Platform",
+    "None"
+  ],
+  "questions.rd_innovation.rd_productivity_metrics.options": [
+    "R&D Spend/Revenue",
+    "Patents per $M R&D",
+    "New Product Revenue %",
+    "Time to Market",
+    "Project Success Rate",
+    "Resource Utilization",
+    "None"
+  ],
+  "questions.rd_innovation.technical_debt.options": [
+    "Minimal",
+    "Manageable",
+    "Significant",
+    "Critical",
+    "Unknown"
+  ],
+  "questions.rd_innovation.sustainability_innovation.options": [
+    "Core Strategy",
+    "Important Initiative",
+    "Exploring",
+    "Not a Priority"
+  ],
+  "questions.productivity.labor_productivity_trend.options": [
+    "Improving >5%/yr",
+    "Improving 1-5%/yr",
+    "Flat",
+    "Declining 1-5%/yr",
+    "Declining >5%/yr"
+  ],
+  "questions.productivity.automation_level.options": [
+    "Lights-out/Fully Automated",
+    "Highly Automated",
+    "Partially Automated",
+    "Manual with Tools",
+    "Fully Manual"
+  ],
+  "questions.productivity.process_standardization.options": [
+    "Fully Standardized",
+    "Mostly Standardized",
+    "Partially Standardized",
+    "Minimal",
+    "No Standards"
+  ],
+  "questions.productivity.continuous_improvement.options": [
+    "Embedded Culture",
+    "Active Program",
+    "Pilot Projects",
+    "Ad-hoc",
+    "None"
+  ],
+  "questions.productivity.productivity_measurement.options": [
+    "Labor Standards/Engineered",
+    "Time Studies",
+    "MOST/MTM",
+    "Real-time Tracking",
+    "ERP/MES Reports",
+    "Manual Tracking",
+    "Not Measured"
+  ],
+  "questions.productivity.bottleneck_analysis.options": [
+    "Weekly",
+    "Monthly",
+    "Quarterly",
+    "Annually",
+    "Rarely/Never"
+  ],
+  "questions.productivity.workforce_skills_matrix.options": [
+    "Current & Comprehensive",
+    "Current but Partial",
+    "Outdated",
+    "In Development",
+    "None"
+  ],
+  "questions.productivity.cross_training_level.options": [
+    "Extensive",
+    "Good",
+    "Moderate",
+    "Limited",
+    "None"
+  ],
+  "questions.productivity.ergonomics_safety.options": [
+    "World Class",
+    "Strong",
+    "Compliant",
+    "Basic",
+    "Minimal"
+  ],
+  "questions.waste_management.environmental_certifications.options": [
+    "ISO 14001",
+    "EMAS",
+    "ISO 50001",
+    "LEED",
+    "B Corp",
+    "Carbon Neutral",
+    "Science Based Targets",
+    "None"
+  ],
+  "questions.waste_management.waste_tracking_system.options": [
+    "Real-time Digital",
+    "ERP Integrated",
+    "Periodic Manual",
+    "Basic Spreadsheet",
+    "None"
+  ],
+  "questions.waste_management.circular_economy_initiatives.options": [
+    "Product Design for Recycling",
+    "Remanufacturing/Refurbishment",
+    "Take-back Programs",
+    "Industrial Symbiosis",
+    "Material Substitution",
+    "Packaging Reduction",
+    "None"
+  ],
+  "questions.waste_management.carbon_footprint_scope3.options": [
+    "Full Measurement",
+    "Partial",
+    "Planning",
+    "Not Measured"
+  ],
+  "questions.waste_management.lean_green_integration.options": [
+    "Fully Integrated",
+    "Aligned Initiatives",
+    "Separate Programs",
+    "Lean Only",
+    "Green Only",
+    "Neither"
+  ],
+  "questions.waste_management.supplier_environmental_requirements.options": [
+    "Mandatory Certifications",
+    "Scoring/Assessment",
+    "Code of Conduct",
+    "Basic Compliance",
+    "None"
+  ],
+  "questions.waste_management.sustainability_reporting.options": [
+    "GRI/SASB/TCFD Compliant",
+    "Voluntary Report",
+    "Internal Only",
+    "Regulatory Only",
+    "None"
+  ],
+  "questions.bcg.bioeconomy_strategy.options": [
+    "Yes, comprehensive",
+    "Yes, basic",
+    "In development",
+    "No"
+  ],
+  "questions.bcg.bio_certifications.options": [
+    "USDA BioPreferred",
+    "OK biobased",
+    "ISCC PLUS",
+    "REDcert²",
+    "RSB",
+    "Bonsucro",
+    "Other"
+  ],
+  "questions.bcg.biotech_adoption.options": [
+    "Advanced (Fermentation, Enzymatic, Synthetic Bio)",
+    "Moderate (Some Bioprocesses)",
+    "Basic (Bio-based Inputs Only)",
+    "None"
+  ],
+  "questions.bcg.bio_supply_chain.options": [
+    "Fully Integrated & Traceable",
+    "Partially Traceable",
+    "Basic Sourcing",
+    "Not Developed"
+  ],
+  "questions.bcg.circular_strategy.options": [
+    "Yes, comprehensive",
+    "Yes, basic",
+    "In development",
+    "No"
+  ],
+  "questions.bcg.circular_maturity.options": [
+    "Regenerative (Cradle-to-Cradle)",
+    "Circular (Closed Loops)",
+    "Recycling Focused",
+    "Waste Reduction Only",
+    "Linear (Take-Make-Waste)"
+  ],
+  "questions.bcg.product_lifecycle_extension.options": [
+    "Repair Services",
+    "Refurbishment/Remanufacturing",
+    "Product-as-a-Service",
+    "Take-back/Buy-back",
+    "Upcycling",
+    "Modular Design",
+    "None"
+  ],
+  "questions.bcg.waste_to_resource.options": [
+    "Industrial Symbiosis",
+    "By-product Valorization",
+    "Waste Heat Recovery",
+    "Anaerobic Digestion",
+    "Composting",
+    "Chemical Recycling",
+    "None"
+  ],
+  "questions.bcg.circular_design_principles.options": [
+    "Design for Durability",
+    "Design for Repair",
+    "Design for Disassembly",
+    "Design for Recycling",
+    "Design for Reuse",
+    "Material Standardization",
+    "None"
+  ],
+  "questions.bcg.packaging_circularity.options": [
+    "100% Reusable/Recyclable/Compostable",
+    "Mostly Recyclable",
+    "Partially Recyclable",
+    "Single-use Dominant",
+    "Not Assessed"
+  ],
+  "questions.bcg.circular_kpis.options": [
+    "Material Circularity Indicator (MCI)",
+    "Circular Transition Indicators (CTI)",
+    "Recycling Rate",
+    "Recycled Content %",
+    "Product Lifetime Extension",
+    "Resource Productivity",
+    "Waste Generation per Unit",
+    "None"
+  ],
+  "questions.bcg.green_strategy.options": [
+    "Yes, Net Zero committed (SBTi)",
+    "Yes, Carbon Neutral committed",
+    "Yes, Basic Sustainability",
+    "In development",
+    "No"
+  ],
+  "questions.bcg.scope3_emissions.options": [
+    "Yes, Comprehensive",
+    "Yes, Partial (Key Categories)",
+    "In Progress",
+    "No"
+  ],
+  "questions.bcg.water_stewardship.options": [
+    "Advanced (AWS Certified)",
+    "Comprehensive",
+    "Basic Monitoring",
+    "Compliance Only",
+    "None"
+  ],
+  "questions.bcg.biodiversity_action.options": [
+    "TNFD Reporting",
+    "No Net Loss/Net Gain Targets",
+    "Habitat Restoration",
+    "Sustainable Land Use",
+    "Supply Chain Deforestation-free",
+    "None"
+  ],
+  "questions.bcg.green_finance.options": [
+    "Green Bonds",
+    "Sustainability-linked Loans",
+    "Green Loans",
+    "Carbon Credits",
+    "ESG-linked Derivatives",
+    "None"
+  ],
+  "questions.bcg.carbon_pricing_internal.options": [
+    "Yes, Shadow Price",
+    "Yes, Internal Fee",
+    "Planned",
+    "No"
+  ],
+  "questions.bcg.climate_transition_plan.options": [
+    "Yes, Comprehensive",
+    "Yes, Basic",
+    "In Development",
+    "No"
+  ],
+  "questions.bcg.bcg_governance.options": [
+    "Board-level Sustainability Committee",
+    "Chief Sustainability Officer",
+    "BCG Steering Committee",
+    "Cross-functional Working Groups",
+    "External Advisory Board",
+    "None Formal"
+  ],
+  "questions.bcg.bcg_kpi_integration.options": [
+    "Yes, Significant Weight",
+    "Yes, Moderate Weight",
+    "Yes, Minor Weight",
+    "No"
+  ],
+  "questions.bcg.bcg_digital_tools.options": [
+    "LCA Software (SimaPro, GaBi, openLCA)",
+    "Material Flow Analysis",
+    "Digital Product Passport",
+    "Blockchain Traceability",
+    "AI for Resource Optimization",
+    "IoT for Energy/Resource Monitoring",
+    "None"
+  ],
+  "questions.bcg.bcg_stakeholder_engagement.options": [
+    "Customers",
+    "Suppliers",
+    "Investors",
+    "Employees",
+    "Local Communities",
+    "Regulators",
+    "NGOs",
+    "Academia"
+  ],
+  "questions.bcg.bcg_training.options": [
+    "Comprehensive Program",
+    "Role-specific Training",
+    "Awareness Only",
+    "Ad-hoc",
+    "None"
+  ],
+  "questions.bcg.bcg_regulatory_readiness.options": [
+    "Fully Prepared",
+    "Well Progressed",
+    "Early Stages",
+    "Not Started",
+    "Unaware"
+  ],
+  "questions.oee.oee_tracked.options": [
+    "Yes - Real-time/Automated",
+    "Yes - Manual/Daily",
+    "Yes - Periodic Studies",
+    "No - Not Tracked"
+  ],
+  "questions.oee.oee_data_collection.options": [
+    "Automated (IIoT/MES)",
+    "Semi-automated (PLC + Manual)",
+    "Manual (Paper/Excel)",
+    "Operator Log Sheets",
+    "Not Collected"
+  ],
+  "questions.oee.oee_frequency.options": [
+    "Real-time",
+    "Per Shift",
+    "Daily",
+    "Weekly",
+    "Monthly",
+    "Ad-hoc"
+  ],
+  "questions.oee.six_big_losses_tracked.options": [
+    "All 6 Tracked",
+    "4-5 Tracked",
+    "2-3 Tracked",
+    "Only Overall",
+    "Not Categorized"
+  ],
+  "questions.oee.availability_losses.options": [
+    "Unplanned Downtime/Breakdowns",
+    "Planned Downtime (Changeovers)",
+    "Planned Downtime (Maintenance)",
+    "Setup/Adjustment",
+    "No Operator/Material",
+    "Other"
+  ],
+  "questions.oee.performance_losses.options": [
+    "Micro Stops/Idling",
+    "Reduced Speed",
+    "Minor Stops",
+    "Start-up Losses",
+    "Changeover Overruns",
+    "Other"
+  ],
+  "questions.oee.quality_losses.options": [
+    "Start-up Scrap",
+    "Production Scrap",
+    "Rework",
+    "In-process Defects",
+    "Customer Returns",
+    "Other"
+  ],
+  "questions.oee.tpm_program.options": [
+    "Full TPM (All 8 Pillars)",
+    "Partial TPM (3-5 Pillars)",
+    "Focused Improvement Only",
+    "Autonomous Maintenance Only",
+    "Planned Maintenance Only",
+    "No TPM"
+  ],
+  "questions.oee.oee_visual_management.options": [
+    "Real-time Displays",
+    "Daily Boards",
+    "Weekly Reports",
+    "Monthly Reports",
+    "None"
+  ],
+  "questions.oee.oee_operator_engagement.options": [
+    "High (Own OEE)",
+    "Moderate (Participate)",
+    "Low (Aware Only)",
+    "None"
+  ],
+  "questions.oee.biggest_oee_loss.options": [
+    "Availability - Breakdowns",
+    "Availability - Changeovers",
+    "Performance - Speed Loss",
+    "Performance - Micro Stops",
+    "Quality - Scrap",
+    "Quality - Rework",
+    "Not Sure"
+  ]
+}

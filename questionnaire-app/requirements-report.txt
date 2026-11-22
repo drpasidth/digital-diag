@@ -1,0 +1,7 @@
+# Report Generator Dependencies
+requests>=2.31.0
+python-docx>=1.1.0
+matplotlib>=3.7.0
+numpy>=1.24.0
+fpdf2>=2.7.0
+docx2pdf>=0.1.8
